@@ -1028,7 +1028,8 @@ let masterDict = [
 {en: "Whether", es: "Si (En Alternativas:Si Esto O Lo Otro)", categoria: "Conectores", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "Due To", es: "Debido A", categoria: "Conectores", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "As Long As", es: "Siempre Que / Mientras Que", categoria: "Conectores", racha: 0, pesoExtra: 0, fallos: 0},
-  
+
+
 ];
 
 // --- CORRECCIÓN 1: LIMPIEZA AUTOMÁTICA DE ESPACIOS ---
@@ -1042,14 +1043,20 @@ masterDict = masterDict.map(p => {
 });
 
 // Carga de progreso guardado
-// limpiar progreso de palabras que ya no existen
-let savedData = JSON.parse(localStorage.getItem('focusData') || "[]");
-
-savedData = savedData.filter(g =>
-    masterDict.some(p => p.en === g.en)
-);
-
-localStorage.setItem('focusData', JSON.stringify(savedData));
+let savedData = localStorage.getItem('focusData');
+if (savedData) {
+    try {
+        let progresoGuardado = JSON.parse(savedData);
+        masterDict.forEach(p => {
+            let guardada = progresoGuardado.find(g => g.en === p.en);
+            if (guardada) { 
+                p.racha = guardada.racha || 0; 
+                p.pesoExtra = guardada.pesoExtra || 0;
+                p.fallos = guardada.fallos || 0; 
+            }
+        });
+    } catch(e) { localStorage.removeItem('focusData'); }
+}
 
 // Variables Globales
 let actual = {}, modo = 0;
@@ -1193,11 +1200,22 @@ function renderQuiz() {
     
     let opciones = [actual.es];
     
-    // Evita errores si hay menos de 4 palabras en la categoría
-    while(opciones.length < 4 && opciones.length < masterDict.length) {
-        let azar = masterDict[Math.floor(Math.random() * masterDict.length)].es;
-        if(!opciones.includes(azar)) opciones.push(azar);
+    
+    // SOLO palabras de la categoría seleccionada
+let poolCategoria = categoriaActual === "Todas"
+    ? masterDict
+    : masterDict.filter(p => p.categoria === categoriaActual);
+
+// Evita errores si hay menos de 4 palabras
+while(opciones.length < 4 && opciones.length < poolCategoria.length) {
+    let azar = poolCategoria[
+        Math.floor(Math.random() * poolCategoria.length)
+    ].es;
+
+    if(!opciones.includes(azar)) {
+        opciones.push(azar);
     }
+}
     
     opciones.sort(() => Math.random() - 0.5);
     
