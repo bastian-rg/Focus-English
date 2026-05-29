@@ -1362,26 +1362,45 @@ window.flip = function() {
 };
 
 // --- CORRECCIÓN 4: SONIDO ADAPTATIVO AL IDIOMA ---
+// --- CORRECCIÓN 4: SONIDO ADAPTATIVO AL IDIOMA ---
 window.hablar = function() {
     window.speechSynthesis.cancel();
 
     const m = new SpeechSynthesisUtterance(actual.en);
     let voces = window.speechSynthesis.getVoices();
 
-    // Siempre usar voz en inglés
+    // Siempre usar idioma inglés estadounidense
     m.lang = 'en-US';
 
+    // Buscador inteligente de la mejor voz disponible
     let vozIngles =
+        // 1. Intentar buscar voces premium mejoradas de Apple (iPhone)
+        voces.find(v => v.lang === 'en-US' && v.name.includes('Enhanced')) ||
+        // 2. Si no hay, intentar usar la voz de Siri (iPhone)
+        voces.find(v => v.lang === 'en-US' && v.name.includes('Siri')) ||
+        // 3. Si no hay, usar a 'Samantha' (La voz de mujer clásica y ultra clara de Apple)
+        voces.find(v => v.lang === 'en-US' && v.name.includes('Samantha')) ||
+        // 4. Si es Android, usar la voz de Google por defecto
         voces.find(v => v.name.includes("Google") && v.lang.includes("en")) ||
+        // 5. Emergencia por si falla todo lo anterior
         voces.find(v => v.lang.includes("en"));
 
     if (vozIngles) m.voice = vozIngles;
 
-    m.rate = 0.6;
-    m.pitch = 1.2;
+    // --- MEJORA DE PRONUNCIACIÓN PARA APRENDIZAJE ---
+    // Subido de 0.6 a 0.85 (0.6 era demasiado lento y hacía sonar la voz robótica/deformada)
+    m.rate = 0.85; 
+    
+    // Bajado de 1.2 a 1.0 (El tono 1.0 es el tono humano natural, 1.2 hacía sonar la voz chillona)
+    m.pitch = 1.0; 
 
     window.speechSynthesis.speak(m);
 };
+
+// Asegurar que iPhone cargue la lista de voces a tiempo
+if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+}
 
 window.presionar = function() { document.getElementById('pantalla').classList.add('presionado'); };
 window.soltar = function() { document.getElementById('pantalla').classList.remove('presionado'); };
