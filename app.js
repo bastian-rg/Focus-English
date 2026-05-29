@@ -3,9 +3,31 @@ let masterDict = [
     // ⚠️ PEGA AQUÍ ADENTRO TUS 1000 PALABRAS EXACTAMENTE COMO LAS TIENES
     {en: "1", es: "uno", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
     {en: "2", es: "dos", categoria: "verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-  {en: "3", es: "tres", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+    
+{en: "3", es: "tres", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "chair", es: "silla", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "desk", es: "escritorio", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "bed", es: "cama", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "sofa", es: "sofá", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "lamp", es: "lámpara", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "door", es: "puerta", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "window", es: "ventana", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "wall", es: "pared", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "floor", es: "piso / suelo", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "roof", es: "techo (exterior)", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "key", es: "llave", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "lock", es: "cerradura / candado", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "bag", es: "bolsa / saco", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "box", es: "caja", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "bottle", es: "botella", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "cup", es: "taza", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "glass", es: "vaso / vidrio", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "plate", es: "plato", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "bowl", es: "tazón", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+{en: "spoon", es: "cuchara", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+
   {en: "4", es: "cuatro", categoria: "Adjetivos y Adverbios", racha: 0, pesoExtra: 0, fallos: 0},
-  {en: "5", es: "cinco", categoria: "Conectores y Frases", racha: 0, pesoExtra: 0, fallos: 0},
+  {en: "5", es: "cinco", categoria: "Conectores y Frases", racha: 0, pesoExtra: 0, fallos: 0}
   
 ];
 
