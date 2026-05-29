@@ -231,22 +231,36 @@ td { padding: 10px; border-bottom: 1px solid #eee; font-size: 15px; }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @supports not (-webkit-touch-callout: none) {
     
-    /* Reducimos la tarjeta solo en Android para recuperar espacio */
+    /* --- 1. Ajustes de la pantalla de Juego (Lo que ya funcionaba) --- */
     .card {
       height: 240px; 
     }
 
-    /* Compactamos un poco los botones solo en Android */
     .btn-opcion, .btn-menu, .btn-ajuste, .btn-next, .btn-volver {
       padding: 13px 18px;
     }
 
-    /* Quitamos el margen exagerado que lo empujaba hacia abajo */
     .btn-volver {
       margin-bottom: 12px;
     }
     
+    /* --- 2. NUEVO: Ajustes para la pantalla de REGISTROS --- */
+    #tabla-registros {
+      max-height: 16vh; /* Reducimos el alto máximo de la tabla de 25vh a 16vh */
+    }
+
+    .stat-cat, .semana-row {
+      padding: 6px 12px; /* Cajas de estadísticas un poco más compactas */
+      margin: 4px 0;      /* Menos separación entre ellas */
+      font-size: 14px;    /* Letra un pelín más pequeña */
+    }
+
+    .time-box {
+      margin: 6px 0;      /* Menos margen en la caja de tiempo */
+      padding: 4px;
+      font-size: 18px;
+    }
+
   }
 }
-
 
