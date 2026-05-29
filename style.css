@@ -113,6 +113,7 @@ button:active { transform: scale(0.98); }
   border: none; 
   width: 100%; 
   margin: 8px 0;
+  margin-bottom: env(safe-area-inset-bottom);
 }
 
 .btn-next { 
@@ -223,4 +224,11 @@ td { padding: 10px; border-bottom: 1px solid #eee; font-size: 15px; }
   border-radius:8px;
   font-weight:bold;
   box-shadow:0 2px 5px rgba(0,0,0,0.05);
+}
+
+#juego{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:100%;
 }
