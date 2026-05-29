@@ -29,7 +29,7 @@ let masterDict = [
 
 
   {en: "4", es: "cuatro", categoria: "Adjetivos y Adverbios", racha: 0, pesoExtra: 0, fallos: 0},
-  {en: "5", es: "cinco", categoria: "Conectores y Frases", racha: 0, pesoExtra: 0, fallos: 0}
+  {en: "5", es: "cinco", categoria: "Conectores y Frases", racha: 0, pesoExtra: 0, fallos: 0},
   
 ];
 
