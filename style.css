@@ -112,9 +112,7 @@ button:active { transform: scale(0.98); }
   width: 100%; 
   margin: 8px 0 22px 0;
 }
-.btn-volver{
-  margin-top: auto;
-}
+
 
 .btn-next { 
   background: #4B7375; 
