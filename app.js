@@ -44,26 +44,14 @@ masterDict = masterDict.map(p => {
 });
 
 // Carga de progreso guardado
-let savedData = localStorage.getItem('focusData');
+// limpiar progreso de palabras que ya no existen
+let savedData = JSON.parse(localStorage.getItem('focusData') || "[]");
 
-if (savedData) {
-    try {
-        let progresoGuardado = JSON.parse(savedData);
+savedData = savedData.filter(g =>
+    masterDict.some(p => p.en === g.en)
+);
 
-        masterDict.forEach(p => {
-            let guardada = progresoGuardado.find(g => g.en === p.en);
-
-            if (guardada) {
-                p.racha = guardada.racha ?? 0;
-                p.pesoExtra = guardada.pesoExtra ?? 0;
-                p.fallos = guardada.fallos ?? 0;
-            }
-        });
-
-    } catch (e) {
-        localStorage.removeItem('focusData');
-    }
-}
+localStorage.setItem('focusData', JSON.stringify(savedData));
 
 // Variables Globales
 let actual = {}, modo = 0;
