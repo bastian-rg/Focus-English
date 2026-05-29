@@ -17,12 +17,23 @@ html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+#juego{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#opciones{
+  flex: 1;
+  overflow-y: auto;
+}
+
+
 #app { 
   width: 100%;
   min-height: 100dvh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   padding: 15px;
   padding-bottom: max(15px, env(safe-area-inset-bottom));
 }
@@ -110,7 +121,9 @@ button:active { transform: scale(0.98); }
   border: none; 
   width: 100%; 
   margin: 8px 0 22px 0;
-  
+}
+.btn-volver{
+  margin-top: auto;
 }
 
 .btn-next { 
