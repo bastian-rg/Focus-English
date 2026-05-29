@@ -26,6 +26,8 @@ let masterDict = [
 {en: "bowl", es: "tazón", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "spoon", es: "cuchara", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
     {en: "fork", es: "tenedor", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+    {en: "knife", es: "cuchillo", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
+
 
 
   {en: "4", es: "cuatro", categoria: "Adjetivos y Adverbios", racha: 0, pesoExtra: 0, fallos: 0},
