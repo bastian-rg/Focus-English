@@ -225,11 +225,27 @@ td { padding: 10px; border-bottom: 1px solid #eee; font-size: 15px; }
 }
 
 
+/* ==========================================
+   SOLO PARA ANDROID (No afecta a iPhone)
+   ========================================== */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @supports not (-webkit-touch-callout: none) {
-    .btn-volver{
-      margin-bottom: 28px;
+    
+    /* Reducimos la tarjeta solo en Android para recuperar espacio */
+    .card {
+      height: 240px; 
     }
+
+    /* Compactamos un poco los botones solo en Android */
+    .btn-opcion, .btn-menu, .btn-ajuste, .btn-next, .btn-volver {
+      padding: 13px 18px;
+    }
+
+    /* Quitamos el margen exagerado que lo empujaba hacia abajo */
+    .btn-volver {
+      margin-bottom: 12px;
+    }
+    
   }
 }
 
