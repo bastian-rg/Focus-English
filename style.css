@@ -1,0 +1,221 @@
+/* 1. Configuración general y bloqueo de zoom */
+* { 
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; 
+  -webkit-user-select: none; 
+  user-select: none; 
+  touch-action: manipulation;
+}
+
+html, body { 
+  margin: 0; 
+  padding: 0; 
+  width: 100%;
+  height: 100%; 
+  overflow: hidden; 
+  background-color: #E0DDD7; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+  position: fixed;
+}
+
+#app { 
+  width: 100vw; 
+  height: 100vh; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 15px;
+}
+
+/* 2. Contenedores de pantallas */
+#menu, #juego, #ajustes, #registros { 
+  width: 100%; 
+  max-width: 400px; 
+  text-align: center;
+}
+
+/* 3. Estilos de la Tarjeta */
+.card { 
+  background: #C6D6C3; 
+  padding: 20px; 
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+  margin: 0 auto 20px auto; 
+  width: 90vw; 
+  max-width: 320px; 
+  height: 320px; 
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
+  cursor: pointer; 
+  transition: background-color 0.1s ease; 
+}
+
+.card.presionado { background-color: #DAE5D5; }
+
+#icono-sonido { 
+  position: absolute; 
+  top: 15px; 
+  left: 15px; 
+  font-size: 24px; 
+}
+
+#texto-palabra { 
+  font-size: 32px; 
+  font-weight: bold;
+  color: #2c3e50;
+  word-wrap: break-word;
+}
+
+/* 4. Estilos Generales de Botones (comportamiento) */
+button { 
+  transition: transform 0.1s; 
+  cursor: pointer; 
+  font-size: 16px; 
+  font-weight: 600; 
+}
+
+button:active { transform: scale(0.98); }
+
+/* Clases específicas de colores para cada grupo de botones */
+.btn-menu { 
+  background: #4B7375; 
+  color: white; 
+  padding: 18px; 
+  border-radius: 12px; 
+  border: none; 
+  width: 100%; 
+  margin: 8px 0;
+}
+
+.btn-ajuste { 
+  background: #684b75; /* Color diferente para las categorías */
+  color: white; 
+  padding: 18px; 
+  border-radius: 12px; 
+  border: none; 
+  width: 100%; 
+  margin: 8px 0;
+}
+
+.btn-volver { 
+  background: #4B4641; /* Gris para volver */
+  color: white; 
+  padding: 18px; 
+  border-radius: 12px; 
+  border: none; 
+  width: 100%; 
+  margin: 8px 0;
+}
+
+.btn-next { 
+  background: #4B7375; 
+  color: white; 
+  padding: 18px; 
+  border-radius: 12px; 
+  border: none; 
+  width: 100%; 
+  margin: 8px 0;
+}
+.btn-opcion { 
+  background-color: #D4CCC5;      /* Color de fondo #D4CCC5*/
+  color: #2F3935;                 /* Texto oscuro */
+  border: 2px solid #4B4641;      /* Borde oscuro para definir el botón */
+  border-radius: 12px;
+  padding: 18px;
+  width: 100%;
+  margin: 8px 0;
+  font-weight: 500;               /* Peso medio para que no sea tan pesado */
+  transition: all 0.2s ease;      /* Transición suave para el estado hover */
+}
+
+
+.btn-activa { 
+  background: #684b75; 
+  border: 2px solid #fff;
+}
+
+/* Estados de respuesta del Quiz */
+.correcta { background: #6B8E7B !important; color: white !important; border-color: #65947a !important; }
+.incorrecta { background: #B87A6E !important; color: white !important; border-color: #c97f71 !important; }
+
+/* Utilidad para ocultar pantallas */
+.hidden { display: none; }
+
+/* 5. Tabla de registros y Categorías */
+#tabla-registros { 
+  background: white; 
+  padding: 10px;
+  border-radius: 12px; 
+  margin: 10px 0; 
+  max-height: 25vh; 
+  overflow-y: auto; 
+  overflow-x: hidden;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th { 
+  background: #ecf0f1;
+  padding: 12px;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+td { padding: 10px; border-bottom: 1px solid #eee; font-size: 15px; }
+
+/* Fila clicable en la tabla de fallos */
+.fila-palabra { 
+  cursor: pointer; 
+  transition: background 0.2s; 
+}
+.fila-palabra:hover { 
+  background: #e8f4f8; 
+}
+
+/* Cajas de resumen de categorías */
+.stat-cat { 
+  display: flex; 
+  justify-content: space-between; 
+  padding: 10px 15px; 
+  background: white; 
+  margin: 6px 0; 
+  border-radius: 8px; 
+  border-left: 5px solid #34495e; 
+  font-size: 15px; 
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.stat-cat-title { color: #34495e; }
+.stat-cat-numbers { color: #27ae60; }
+
+/* TIEMPO EN PANTALLA */
+
+.time-box{
+  background:white;
+  border-radius:12px;
+  padding:5px;
+  margin:10px 0;
+  font-size:20px;
+  font-weight:bold;
+  color:#2c3e50;
+  box-shadow:0 2px 5px rgba(0,0,0,0.05);
+}
+
+.semana-row{
+  display:flex;
+  justify-content:space-between;
+  background:white;
+  padding:12px 15px;
+  margin:6px 0;
+  border-radius:8px;
+  font-weight:bold;
+  box-shadow:0 2px 5px rgba(0,0,0,0.05);
+}

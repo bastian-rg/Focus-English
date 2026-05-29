@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Focus English</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  </head>
+<body>
+
+<div id="app">
+  <div id="menu">
+    <h1>Focus English</h1>
+    <button class="btn-menu" onclick="window.iniciar(1)">Flashcards</button>
+    <button class="btn-menu" onclick="window.iniciar(2)">Quiz</button>
+    <button class="btn-menu" onclick="window.mostrarAjustes()">Ajustes</button>
+    <button class="btn-menu" onclick="window.mostrarRegistros()">Registros</button>
+  </div>
+
+  <div id="juego" class="hidden">
+    <div id="pantalla" class="card" 
+         onclick="window.flip()" 
+         onmousedown="window.presionar()" 
+         onmouseup="window.soltar()" 
+         ontouchstart="window.presionar()" 
+         ontouchend="window.soltar()">
+      
+      <span id="icono-sonido" onclick="event.stopPropagation(); window.hablar();">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="#808080">
+    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+  </svg>
+</span>
+      
+      
+      <div id="texto-palabra">--</div>
+    </div>
+    
+    <div id="opciones"></div>
+    <button id="btn-siguiente" class="btn-next hidden" onclick="window.siguiente()">Siguiente →</button>
+    <button class="btn-volver" onclick="window.volver()">← Volver</button>
+  </div>
+
+  <div id="ajustes" class="hidden">
+    <h2>Elegir Categoría</h2>
+    <div id="lista-categorias"></div>
+    <button class="btn-volver" style="margin-top: 15px;" onclick="window.volver()">← Volver</button>
+  </div>
+
+  <div id="registros" class="hidden">
+    <h2 id="titulo-aprendidas" style="color: #27ae60; font-size: 28px; margin-bottom: 5px;">0 / 1000</h2>
+    <p style="margin-top: 0; color: #7f8c8d; font-weight: bold;">Palabras Aprendidas</p>
+    
+    <div id="stats-categorias"></div>
+    
+    <h3 style="margin-top:1px;color:#2c3e50;">Tiempo en pantalla</h3>
+
+<div id="tiempo-total" class="time-box">
+  00:00:00
+</div>
+
+<h3 style="margin-top:5px;color:#2c3e50;">Tiempo por semanas</h3>
+
+<div id="tabla-semanas"></div>
+    
+    <h3 style="margin-top: 20px; color: #2c3e50;">Palabras con más fallos</h3>
+    <p style="font-size: 10px; color: #7f8c8d; margin-top: -10px;">(Toca una palabra para practicarla)</p>
+    <div id="tabla-registros"></div>
+    
+    <button class="btn-volver" onclick="window.volver()">← Volver</button>
+  </div>
+</div>
+
+ <script src="app.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</body>
+</html>
