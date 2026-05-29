@@ -22,10 +22,7 @@ html, body {
   flex-direction: column;
   height: 100%;
 }
-#opciones{
-  flex: 1;
-  overflow-y: auto;
-}
+
 
 
 #app { 
