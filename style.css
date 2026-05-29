@@ -113,7 +113,7 @@ button:active { transform: scale(0.98); }
   border: none; 
   width: 100%; 
   margin: 8px 0;
-  margin-bottom: env(safe-area-inset-bottom);
+  
 }
 
 .btn-next { 
