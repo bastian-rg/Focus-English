@@ -50,12 +50,17 @@ if (savedData) {
     try {
         let progresoGuardado = JSON.parse(savedData);
 
-        masterDict = masterDict.map(p => {
+        masterDict.forEach(p => {
             let guardada = progresoGuardado.find(g => g.en === p.en);
-            return guardada ? { ...p, ...guardada } : p;
+
+            if (guardada) {
+                p.racha = guardada.racha ?? 0;
+                p.pesoExtra = guardada.pesoExtra ?? 0;
+                p.fallos = guardada.fallos ?? 0;
+            }
         });
 
-    } catch(e) {
+    } catch (e) {
         localStorage.removeItem('focusData');
     }
 }
