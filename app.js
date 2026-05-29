@@ -1,7 +1,7 @@
 // 1. BASE DE DATOS (Lista maestra)
 let masterDict = [
     // ⚠️ PEGA AQUÍ ADENTRO TUS 1000 PALABRAS EXACTAMENTE COMO LAS TIENES
-    {en: "1", es: "uno", categoria: "numero 1", racha: 0, pesoExtra: 0, fallos: 0}
+    {en: "1", es: "uno", categoria: "numero 1", racha: 0, pesoExtra: 0, fallos: 0},
     {en: "chair", es: "silla", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "desk", es: "escritorio", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "bed", es: "cama", categoria: "Sustantivos de Entorno", racha: 0, pesoExtra: 0, fallos: 0},
