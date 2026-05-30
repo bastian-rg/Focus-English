@@ -1080,28 +1080,19 @@ let actual = {}, modo = 0;
 let categoriaActual = "Todas";
 
 /* TIEMPO EN APP */
-
 let tiempoData = JSON.parse(localStorage.getItem('focusTime')) || {
     inicioSemana: Date.now(),
     totalMs: 0,
     semanas: {},
     ultimoInicio: null
 };
-
 let timerInterval = null;
-
-// --- CORRECCIÓN 2: VARIABLE DE BLOQUEO PARA EL QUIZ ---
-let quizBloqueado = false; 
-
-// 2. NAVEGACIÓN
+let quizBloqueado = false;
 
 /* ===== TIEMPO EN APP ===== */
-
 function iniciarTimer(){
     if(tiempoData.ultimoInicio) return;
-
     tiempoData.ultimoInicio = Date.now();
-
     timerInterval = setInterval(() => {
         actualizarTiempoPantalla();
     },1000);
@@ -1112,55 +1103,37 @@ function pausarTimer(){
 
     let ahora = Date.now();
     let tiempoSesion = ahora - tiempoData.ultimoInicio;
-
     tiempoData.totalMs += tiempoSesion;
-
     let semana = obtenerSemana();
 
     if(!tiempoData.semanas[semana]){
         tiempoData.semanas[semana] = 0;
     }
-
     tiempoData.semanas[semana] += tiempoSesion;
-
     tiempoData.ultimoInicio = null;
-
-    localStorage.setItem(
-        'focusTime',
-        JSON.stringify(tiempoData)
-    );
-
+    localStorage.setItem('focusTime', JSON.stringify(tiempoData));
     clearInterval(timerInterval);
 }
 
 function obtenerSemana(){
-    let dias = Math.floor(
-        (Date.now() - tiempoData.inicioSemana)
-        / (1000*60*60*24)
-    );
-
+    let dias = Math.floor((Date.now() - tiempoData.inicioSemana) / (1000*60*60*24));
     return Math.floor(dias/7)+1;
 }
 
 function formatearTiempo(ms){
     let s = Math.floor(ms/1000);
-
     let h = String(Math.floor(s/3600)).padStart(2,'0');
     let m = String(Math.floor((s%3600)/60)).padStart(2,'0');
     let sec = String(s%60).padStart(2,'0');
-
     return `${h}:${m}:${sec}`;
 }
 
 function actualizarTiempoPantalla(){
     let total = tiempoData.totalMs;
-
     if(tiempoData.ultimoInicio){
         total += Date.now() - tiempoData.ultimoInicio;
     }
-
     let box = document.getElementById('tiempo-total');
-
     if(box){
         box.innerText = formatearTiempo(total);
     }
@@ -1180,15 +1153,10 @@ window.volver = function() {
 
 // 3. LÓGICA DE JUEGO
 window.siguiente = function() {
-    quizBloqueado = false; // Desbloqueamos el quiz al cambiar de palabra
-
-    // FILTRAR POR CATEGORÍA
-    let listaParaUsar = categoriaActual === "Todas" 
-        ? masterDict 
-        : masterDict.filter(p => p.categoria === categoriaActual);
+    quizBloqueado = false;
+    let listaParaUsar = categoriaActual === "Todas" ? masterDict : masterDict.filter(p => p.categoria === categoriaActual);
         
     if (listaParaUsar.length === 0) return;
-
     let mazoPonderado = [];
     listaParaUsar.forEach(p => {
         mazoPonderado.push(p);
@@ -1196,12 +1164,13 @@ window.siguiente = function() {
             mazoPonderado.push(p);
         }
     });
-
     actual = mazoPonderado[Math.floor(Math.random() * mazoPonderado.length)];
 
     document.getElementById('texto-palabra').innerText = actual.en;
+    let iconoSonidoPrincipal = document.getElementById('icono-sonido');
+    if(iconoSonidoprincipal) iconoSonidoPrincipal.style.display = "block"; // Reset de estado visible
+
     estadoFlashcard = 0;
-    
     if(modo === 2) {
         document.getElementById('btn-siguiente').classList.add('hidden');
         renderQuiz();
@@ -1214,42 +1183,28 @@ window.siguiente = function() {
 function renderQuiz() {
     let container = document.getElementById('opciones');
     container.innerHTML = "";
-    quizBloqueado = false; // Aseguramos desbloqueo al renderizar
+    quizBloqueado = false;
     
     let opciones = [actual.es];
+    let poolCategoria = categoriaActual === "Todas" ? masterDict : masterDict.filter(p => p.categoria === categoriaActual);
     
-    
-    // SOLO palabras de la categoría seleccionada
-let poolCategoria = categoriaActual === "Todas"
-    ? masterDict
-    : masterDict.filter(p => p.categoria === categoriaActual);
-
-// Evita errores si hay menos de 4 palabras
-while(opciones.length < 4 && opciones.length < poolCategoria.length) {
-    let azar = poolCategoria[
-        Math.floor(Math.random() * poolCategoria.length)
-    ].es;
-
-    if(!opciones.includes(azar)) {
-        opciones.push(azar);
+    while(opciones.length < 4 && opciones.length < poolCategoria.length) {
+        let azar = poolCategoria[Math.floor(Math.random() * poolCategoria.length)].es;
+        if(!opciones.includes(azar)) {
+            opciones.push(azar);
+        }
     }
-}
     
     opciones.sort(() => Math.random() - 0.5);
-    
     opciones.forEach(o => {
         let btn = document.createElement('button');
         btn.className = 'btn-opcion';
         btn.innerText = o;
-        
         btn.onclick = function() { 
-            // Si ya se hizo clic, se ignora el resto
             if (quizBloqueado) return; 
-            
-            quizBloqueado = true; // Bloqueamos el instante en que se presiona
+            quizBloqueado = true; 
             window.verificar(this, o); 
         };
-        
         container.appendChild(btn);
     });
 }
@@ -1257,29 +1212,21 @@ while(opciones.length < 4 && opciones.length < poolCategoria.length) {
 window.verificar = function(btn, op) {
     if(op === actual.es) {
         btn.className = "btn-opcion correcta";
-        
         actual.racha++; 
         if(actual.pesoExtra > 0) {
             actual.pesoExtra--;
         }
-        
-        // BORRAR DEL REGISTRO VISUAL DESPUÉS DE 2 ACIERTOS
         if(actual.racha >= 2) {
             actual.fallos = 0;
         }
-        
         localStorage.setItem('focusData', JSON.stringify(masterDict));
         setTimeout(window.siguiente, 350);
     } else {
         btn.className = "btn-opcion incorrecta";
-        
         actual.racha = 0; 
         actual.pesoExtra += 2;
         actual.fallos++; 
-        
         localStorage.setItem('focusData', JSON.stringify(masterDict));
-        
-        // Quita el color rojo y TE DEJA VOLVER A ELEGIR tras medio segundo
         setTimeout(() => { 
             btn.className = "btn-opcion"; 
             quizBloqueado = false; 
@@ -1291,16 +1238,13 @@ window.verificar = function(btn, op) {
 window.mostrarAjustes = function() {
     document.querySelectorAll('#app > div').forEach(e => e.classList.add('hidden'));
     document.getElementById('ajustes').classList.remove('hidden');
-    
     let categoriasUnicas = [...new Set(masterDict.map(p => p.categoria))];
     let contenedorBotones = document.getElementById('lista-categorias');
     contenedorBotones.innerHTML = "";
     
-    // Botón "Todas"
     let btnTodas = `<button onclick="window.setCategoria('Todas')" class="btn-ajuste ${categoriaActual === 'Todas' ? 'btn-activa' : ''}">Todas</button>`;
     contenedorBotones.innerHTML += btnTodas;
     
-    // Botones individuales por categoría
     categoriasUnicas.forEach(cat => {
         let btnCat = `<button onclick="window.setCategoria('${cat}')" class="btn-ajuste ${categoriaActual === cat ? 'btn-activa' : ''}">${cat}</button>`;
         contenedorBotones.innerHTML += btnCat;
@@ -1309,15 +1253,12 @@ window.mostrarAjustes = function() {
 
 window.setCategoria = function(cat) {
     categoriaActual = cat;
-    
-    // --- CORRECCIÓN 3: REDIRIGIR AL MENÚ PRINCIPAL ---
     window.volver(); 
 };
 
 window.mostrarRegistros = function() {
     document.querySelectorAll('#app > div').forEach(e => e.classList.add('hidden'));
     document.getElementById('registros').classList.remove('hidden');
-    
     let aprendidasTotales = masterDict.filter(p => p.racha >= 3).length;
     document.getElementById('titulo-aprendidas').innerText = `${aprendidasTotales} / ${masterDict.length}`;
     
@@ -1336,8 +1277,7 @@ window.mostrarRegistros = function() {
             </div>
         `;
     });
-    
-    document.getElementById('stats-categorias').innerHTML = categoriasHtml;
+    document.getElementById('stats-categorias').innerHTML = GridHtml = categoriasHtml;
     
     let conFallos = masterDict.filter(p => p.fallos > 0).sort((a, b) => b.fallos - a.fallos);
     let t = `<table><tr><th style="text-align: left;">Palabra</th><th style="text-align: center;">Fallos</th></tr>`;
@@ -1352,17 +1292,15 @@ window.mostrarRegistros = function() {
                   </tr>`; 
         });
     }
-    
     document.getElementById('tabla-registros').innerHTML = t + "</table>";
 };
 
-// 5. UTILIDADES Y SALTO DIRECTO DESDE EL REGISTRO
 window.practicarPalabra = function(palabraIngles) {
     let palabraEncontrada = masterDict.find(p => p.en === palabraIngles);
     if(!palabraEncontrada) return;
     
     actual = palabraEncontrada;
-    modo = 1; // Forzar modo Flashcard
+    modo = 1; 
     
     document.querySelectorAll('#app > div').forEach(e => e.classList.add('hidden'));
     document.getElementById('juego').classList.remove('hidden');
@@ -1374,81 +1312,68 @@ window.practicarPalabra = function(palabraIngles) {
 };
 
 let estadoFlashcard = 0;
-
 window.flip = function() {
     if(modo !== 1) return;
 
     let t = document.getElementById('texto-palabra');
-
+    let iconoSonidoPrincipal = document.getElementById('icono-sonido');
+    
     if(estadoFlashcard === 0){
-        t.innerText = actual.es;
-        estadoFlashcard = 1;
+        t.innerText = actual.es; 
+        estadoFlashcard = 1; 
+        if(iconoSonidoPrincipal) iconoSonidoPrincipal.style.display = "block";
     }
     else if(estadoFlashcard === 1){
-        t.innerHTML = actual.ejemplo || "Sin ejemplo";
-        estadoFlashcard = 2;
+        t.innerHTML = actual.ejemplo || "Sin ejemplo"; 
+        estadoFlashcard = 2; 
+        // OCULTAR EL ALTAVOZ PRINCIPAL EN LOS EJEMPLOS
+        if(iconoSonidoPrincipal) iconoSonidoPrincipal.style.display = "none";
     }
     else{
-        t.innerText = actual.en;
-        estadoFlashcard = 0;
+        t.innerText = actual.en; 
+        estadoFlashcard = 0; 
+        if(iconoSonidoPrincipal) iconoSonidoPrincipal.style.display = "block";
     }
 };
 
-// --- CORRECCIÓN 4: SONIDO ADAPTATIVO AL IDIOMA ---
-// --- CORRECCIÓN 4: SONIDO ADAPTATIVO AL IDIOMA ---
-window.hablar = function() {
-    window.speechSynthesis.cancel();
-
-    const m = new SpeechSynthesisUtterance(actual.en);
-    let voces = window.speechSynthesis.getVoices();
-
-    // Siempre usar idioma inglés estadounidense
-    m.lang = 'en-US';
-
-    // Buscador inteligente de la mejor voz disponible
-    let vozIngles =
-        // 1. Intentar buscar voces premium mejoradas de Apple (iPhone)
-        voces.find(v => v.lang === 'en-US' && v.name.includes('Enhanced')) ||
-        // 2. Si no hay, intentar usar la voz de Siri (iPhone)
-        voces.find(v => v.lang === 'en-US' && v.name.includes('Siri')) ||
-        // 3. Si no hay, usar a 'Samantha' (La voz de mujer clásica y ultra clara de Apple)
-        voces.find(v => v.lang === 'en-US' && v.name.includes('Samantha')) ||
-        // 4. Si es Android, usar la voz de Google por defecto
-        voces.find(v => v.name.includes("Google") && v.lang.includes("en")) ||
-        // 5. Emergencia por si falla todo lo anterior
-        voces.find(v => v.lang.includes("en"));
-
-    if (vozIngles) m.voice = vozIngles;
-
-    // --- MEJORA DE PRONUNCIACIÓN PARA APRENDIZAJE ---
-    // Subido de 0.6 a 0.85 (0.6 era demasiado lento y hacía sonar la voz robótica/deformada)
-    m.rate = 0.85; 
+// --- SONIDO ADAPTATIVO: Acepta opcionalmente un texto directo ---
+window.hablar = function(textoPersonalizado) {
+    window.speechSynthesis.cancel(); 
     
-    // Bajado de 1.2 a 1.0 (El tono 1.0 es el tono humano natural, 1.2 hacía sonar la voz chillona)
-    m.pitch = 1.0; 
+    // Si recibe texto dinámico (la frase), usa ese. Si no, lee la palabra por defecto.
+    let textoALeer = textoPersonalizado || actual.en;
+    const m = new SpeechSynthesisUtterance(textoALeer); 
+    let voces = window.speechSynthesis.getVoices(); 
 
-    window.speechSynthesis.speak(m);
+    m.lang = 'en-US'; 
+    let vozIngles =
+        voces.find(v => v.lang === 'en-US' && v.name.includes('Enhanced')) || 
+        voces.find(v => v.lang === 'en-US' && v.name.includes('Siri')) || 
+        voces.find(v => v.lang === 'en-US' && v.name.includes('Samantha')) || 
+        voces.find(v => v.name.includes("Google") && v.lang.includes("en")) || 
+        voces.find(v => v.lang.includes("en")); 
+        
+    if (vozIngles) m.voice = vozIngles; 
+
+    m.rate = 0.85; 
+    m.pitch = 1.0; 
+    window.speechSynthesis.speak(m); 
 };
 
-// Asegurar que iPhone cargue la lista de voces a tiempo
 if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
-    speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+    speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices(); 
 }
 
-window.presionar = function() { document.getElementById('pantalla').classList.add('presionado'); };
-window.soltar = function() { document.getElementById('pantalla').classList.remove('presionado'); };
-
-/* PAUSA / REANUDAR */
+window.presionar = function() { document.getElementById('pantalla').classList.add('presionado'); }; 
+window.soltar = function() { document.getElementById('pantalla').classList.remove('presionado'); }; 
 
 document.addEventListener('visibilitychange', () => {
     if(document.hidden){
-        pausarTimer();
+        pausarTimer(); 
     }else{
-        iniciarTimer();
+        iniciarTimer(); 
     }
 });
-
-iniciarTimer();
-
+iniciarTimer(); 
 console.log("App cargada");
 
