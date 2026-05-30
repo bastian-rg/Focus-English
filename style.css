@@ -3,7 +3,7 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent; 
   -webkit-user-select: none; 
-  user-select: none; 
+  user-select: none;
   touch-action: manipulation;
 }
 
@@ -13,10 +13,9 @@ html, body {
   width: 100%;
   min-height: 100%;
   overflow: hidden; 
-  background-color: #E0DDD7; 
+  background-color: #E0DDD7;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-
 
 #app { 
   width: 100%;
@@ -30,30 +29,28 @@ html, body {
 
 /* 2. Contenedores de pantallas */
 #menu, #juego, #ajustes, #registros { 
-  width: 100%; 
+  width: 100%;
   max-width: 400px; 
   text-align: center;
 }
 
 /* 3. Estilos de la Tarjeta */
 .card { 
-  
   background: #C6D6C3; 
-  padding: 20px; 
+  padding: 20px;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
   margin: 12px auto 20px auto;
   width: 90vw; 
   max-width: 320px; 
   height: 320px; 
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: center; 
   justify-content: center; 
   position: relative; 
   cursor: pointer; 
   transition: background-color 0.1s ease;
-  
 }
 
 .card.presionado { background-color: #DAE5D5; }
@@ -75,7 +72,7 @@ html, body {
 /* 4. Estilos Generales de Botones (comportamiento) */
 button { 
   transition: transform 0.1s; 
-  cursor: pointer; 
+  cursor: pointer;
   font-size: 16px; 
   font-weight: 600; 
 }
@@ -84,7 +81,7 @@ button:active { transform: scale(0.98); }
 
 /* Clases específicas de colores para cada grupo de botones */
 .btn-menu { 
-  background: #4B7375; 
+  background: #4B7375;
   color: white; 
   padding: 18px; 
   border-radius: 12px; 
@@ -94,47 +91,46 @@ button:active { transform: scale(0.98); }
 }
 
 .btn-ajuste { 
-  background: #684b75; /* Color diferente para las categorías */
+  background: #684b75;
   color: white; 
   padding: 18px; 
   border-radius: 12px; 
   border: none; 
-  width: 100%; 
+  width: 100%;
   margin: 8px 0;
 }
 
 .btn-volver { 
-  background: #4B4641; /* Gris para volver */
+  background: #4B4641; 
   color: white; 
-  padding: 18px; 
+  padding: 18px;
   border-radius: 12px; 
   border: none; 
   width: 100%; 
   margin: 8px 0 22px 0;
 }
 
-
 .btn-next { 
   background: #4B7375; 
-  color: white; 
+  color: white;
   padding: 18px; 
   border-radius: 12px; 
   border: none; 
   width: 100%; 
   margin: 8px 0;
 }
+
 .btn-opcion { 
-  background-color: #D4CCC5;      /* Color de fondo #D4CCC5*/
-  color: #2F3935;                 /* Texto oscuro */
-  border: 2px solid #4B4641;      /* Borde oscuro para definir el botón */
+  background-color: #D4CCC5;
+  color: #2F3935;                 
+  border: 2px solid #4B4641;
   border-radius: 12px;
   padding: 18px;
   width: 100%;
   margin: 8px 0;
-  font-weight: 500;               /* Peso medio para que no sea tan pesado */
-  transition: all 0.2s ease;      /* Transición suave para el estado hover */
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
-
 
 .btn-activa { 
   background: #684b75; 
@@ -153,14 +149,13 @@ button:active { transform: scale(0.98); }
   background: white; 
   padding: 10px;
   border-radius: 12px; 
-  margin: 10px 0; 
+  margin: 10px 0;
   max-height: 25vh; 
   overflow-y: auto; 
   overflow-x: hidden;
   border: 1px solid #ddd;
   position: relative;
 }
-
 
 table { width: 100%; border-collapse: collapse; text-align: left; }
 th { 
@@ -177,7 +172,7 @@ td { padding: 10px; border-bottom: 1px solid #eee; font-size: 15px; }
 /* Fila clicable en la tabla de fallos */
 .fila-palabra { 
   cursor: pointer; 
-  transition: background 0.2s; 
+  transition: background 0.2s;
 }
 .fila-palabra:hover { 
   background: #e8f4f8; 
@@ -186,7 +181,7 @@ td { padding: 10px; border-bottom: 1px solid #eee; font-size: 15px; }
 /* Cajas de resumen de categorías */
 .stat-cat { 
   display: flex; 
-  justify-content: space-between; 
+  justify-content: space-between;
   padding: 10px 15px; 
   background: white; 
   margin: 6px 0; 
@@ -201,7 +196,6 @@ td { padding: 10px; border-bottom: 1px solid #eee; font-size: 15px; }
 .stat-cat-numbers { color: #27ae60; }
 
 /* TIEMPO EN PANTALLA */
-
 .time-box{
   background:white;
   border-radius:12px;
@@ -224,16 +218,14 @@ td { padding: 10px; border-bottom: 1px solid #eee; font-size: 15px; }
   box-shadow:0 2px 5px rgba(0,0,0,0.05);
 }
 
-
 /* ==========================================
    SOLO PARA ANDROID (No afecta a iPhone)
    ========================================== */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  @supports not (-webkit-touch-callout: none) {
+  @supports not (-webkit-touch-out: none) {
     
-    /* --- 1. Ajustes de la pantalla de Juego (Lo que ya funcionaba) --- */
     .card {
-      height: 240px; 
+      height: 240px;
     }
 
     .btn-opcion, .btn-menu, .btn-ajuste, .btn-next, .btn-volver {
@@ -244,24 +236,23 @@ td { padding: 10px; border-bottom: 1px solid #eee; font-size: 15px; }
       margin-bottom: 12px;
     }
     
-    /* --- 2. NUEVO: Ajustes para la pantalla de REGISTROS --- */
     #tabla-registros {
-      max-height: 16vh; /* Reducimos el alto máximo de la tabla de 25vh a 16vh */
+      max-height: 16vh;
     }
 
     .stat-cat, .semana-row {
-      padding: 6px 12px; /* Cajas de estadísticas un poco más compactas */
-      margin: 4px 0;      /* Menos separación entre ellas */
-      font-size: 14px;    /* Letra un pelín más pequeña */
+      padding: 6px 12px;
+      margin: 4px 0;
+      font-size: 14px;
     }
 
     .time-box {
-      margin: 6px 0;      /* Menos margen en la caja de tiempo */
+      margin: 6px 0;
       padding: 4px;
       font-size: 18px;
     }
-    }
   }
+}
 
   
 
