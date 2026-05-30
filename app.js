@@ -5,18 +5,15 @@ let masterDict = [
 {
   en: "barely",
   es: "apenas",
-  ejemplo: `Ejemplo:
-
-                                           Se usa para decir que 
-                                                 algo ocurre con muy poca 
-                                           intensidad o cantidad:
-                                       
-
-                                   • I barely slept:
-                                       	 -Apenas dormí
-
-                                   • He barely passed the exam:
-                                         -Apenas aprobó el examen`,
+  ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para decir que algo ocurre con muy poca intensidad o cantidad:</p>
+            <ul style="padding-left: 20px; list-style-type: disc;">
+                <li style="margin-bottom: 8px;"><b>I barely slept:</b><br><span style="color: #555;">-Apenas dormí</span></li>
+                <li><b>He barely passed the exam:</b><br><span style="color: #555;">-Apenas aprobó el examen</span></li>
+            </ul>
+        </div>
+    `,
   categoria: "Prueba 1",
   racha: 0,
   pesoExtra: 0,
