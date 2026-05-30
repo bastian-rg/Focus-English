@@ -5,7 +5,7 @@ let masterDict = [
 {
     en: "barely",
     es: "apenas",
-    categoria: "Adverbios", // O la categoría que corresponda
+    categoria: "prueba", // O la categoría que corresponda
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para decir que algo ocurre con muy poca intensidad o cantidad:</p>
