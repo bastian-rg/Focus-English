@@ -5,11 +5,11 @@ let masterDict = [
 {
     en: "barely",
     es: "apenas",
-    categoria: "Adverbios",
+    categoria: "prueba",
     racha: 0,
     pesoExtra: 0,
     fallos: 0,
-    ejemplo: `
+    ejemplo: 
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para decir que algo ocurre con muy poca intensidad o cantidad:</p>
             <ul style="padding-left: 20px; list-style-type: disc;">
@@ -17,7 +17,7 @@ let masterDict = [
                 <li><b>He barely passed the exam:</b><br><span style="color: #555;">-Apenas aprobó el examen</span></li>
             </ul>
         </div>
-    `
+    
 }
 {en: "A", es: "Un / Una (Antes De Sonido Consonante)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "An", es: "Un / Una (Antes De Sonido Vocal)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
