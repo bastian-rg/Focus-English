@@ -264,3 +264,21 @@ td { padding: 10px; border-bottom: 1px solid #eee; font-size: 15px; }
   }
 }
 
+#version-app {
+  font-size: 11px;
+  color: #7f8c8d; /* Un gris suave para que no llame mucho la atención */
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* Ajuste opcional para Android si quieres que sea aún más compacto */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @supports not (-webkit-touch-callout: none) {
+    #version-app {
+      margin-top: 12px; 
+      font-size: 10px;
+    }
+  }
+}
