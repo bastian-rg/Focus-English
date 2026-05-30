@@ -1,29 +1,7 @@
 // 1. BASE DE DATOS (Lista maestra)
 let masterDict = [
     // ⚠️ PEGA AQUÍ ADENTRO TUS 1000 PALABRAS EXACTAMENTE COMO LAS TIENES
-
-{
-    en: "barely",
-    es: "apenas",
-    categoria: "prueba 1", [cite: 119]
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50; width: 100%;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para decir que algo ocurre con muy poca intensidad o cantidad:</p> [cite: 119]
-            <ul style="padding-left: 20px; list-style-type: disc;"> [cite: 120]
-                <li style="margin-bottom: 12px; position: relative; list-style-position: outside;">
-                    <span style="font-weight: bold;">I barely slept</span> 
-                    <span onclick="event.stopPropagation(); window.hablar('I barely slept');" style="cursor: pointer; margin-left: 8px; font-size: 20px;" title="Escuchar oración">🔊</span>
-                    <br><span style="color: #555;">-Apenas dormí</span> [cite: 120]
-                </li>
-                <li style="position: relative; list-style-position: outside;">
-                    <span style="font-weight: bold;">He barely passed the exam</span> 
-                    <span onclick="event.stopPropagation(); window.hablar('He barely passed the exam');" style="cursor: pointer; margin-left: 8px; font-size: 20px;" title="Escuchar oración">🔊</span>
-                    <br><span style="color: #555;">-Apenas aprobó el examen</span> [cite: 120]
-                </li>
-            </ul>
-        </div>
-    `
-}
+    
 
 {en: "A", es: "Un / Una (Antes De Sonido Consonante)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "An", es: "Un / Una (Antes De Sonido Vocal)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
@@ -1085,6 +1063,7 @@ let actual = {}, modo = 0;
 let categoriaActual = "Todas";
 
 /* TIEMPO EN APP */
+
 let tiempoData = JSON.parse(localStorage.getItem('focusTime')) || {
     inicioSemana: Date.now(),
     totalMs: 0,
@@ -1093,15 +1072,22 @@ let tiempoData = JSON.parse(localStorage.getItem('focusTime')) || {
 };
 
 let timerInterval = null;
+
+// --- CORRECCIÓN 2: VARIABLE DE BLOQUEO PARA EL QUIZ ---
 let quizBloqueado = false; 
 
+// 2. NAVEGACIÓN
+
 /* ===== TIEMPO EN APP ===== */
+
 function iniciarTimer(){
     if(tiempoData.ultimoInicio) return;
+
     tiempoData.ultimoInicio = Date.now();
+
     timerInterval = setInterval(() => {
         actualizarTiempoPantalla();
-    }, 1000);
+    },1000);
 }
 
 function pausarTimer(){
@@ -1109,37 +1095,55 @@ function pausarTimer(){
 
     let ahora = Date.now();
     let tiempoSesion = ahora - tiempoData.ultimoInicio;
+
     tiempoData.totalMs += tiempoSesion;
+
     let semana = obtenerSemana();
 
     if(!tiempoData.semanas[semana]){
         tiempoData.semanas[semana] = 0;
     }
+
     tiempoData.semanas[semana] += tiempoSesion;
+
     tiempoData.ultimoInicio = null;
-    localStorage.setItem('focusTime', JSON.stringify(tiempoData));
+
+    localStorage.setItem(
+        'focusTime',
+        JSON.stringify(tiempoData)
+    );
+
     clearInterval(timerInterval);
 }
 
 function obtenerSemana(){
-    let dias = Math.floor((Date.now() - tiempoData.inicioSemana) / (1000*60*60*24));
+    let dias = Math.floor(
+        (Date.now() - tiempoData.inicioSemana)
+        / (1000*60*60*24)
+    );
+
     return Math.floor(dias/7)+1;
 }
 
 function formatearTiempo(ms){
     let s = Math.floor(ms/1000);
+
     let h = String(Math.floor(s/3600)).padStart(2,'0');
     let m = String(Math.floor((s%3600)/60)).padStart(2,'0');
     let sec = String(s%60).padStart(2,'0');
+
     return `${h}:${m}:${sec}`;
 }
 
 function actualizarTiempoPantalla(){
     let total = tiempoData.totalMs;
+
     if(tiempoData.ultimoInicio){
         total += Date.now() - tiempoData.ultimoInicio;
     }
+
     let box = document.getElementById('tiempo-total');
+
     if(box){
         box.innerText = formatearTiempo(total);
     }
@@ -1157,12 +1161,17 @@ window.volver = function() {
     document.getElementById('menu').classList.remove('hidden');
 };
 
-// LÓGICA DE JUEGO
+// 3. LÓGICA DE JUEGO
 window.siguiente = function() {
-    quizBloqueado = false;
-    let listaParaUsar = categoriaActual === "Todas" ? masterDict : masterDict.filter(p => p.categoria === categoriaActual);
+    quizBloqueado = false; // Desbloqueamos el quiz al cambiar de palabra
+
+    // FILTRAR POR CATEGORÍA
+    let listaParaUsar = categoriaActual === "Todas" 
+        ? masterDict 
+        : masterDict.filter(p => p.categoria === categoriaActual);
         
     if (listaParaUsar.length === 0) return;
+
     let mazoPonderado = [];
     listaParaUsar.forEach(p => {
         mazoPonderado.push(p);
@@ -1170,15 +1179,11 @@ window.siguiente = function() {
             mazoPonderado.push(p);
         }
     });
+
     actual = mazoPonderado[Math.floor(Math.random() * mazoPonderado.length)];
 
     document.getElementById('texto-palabra').innerText = actual.en;
     
-    // CORREGIDO: Uso exacto de mayúsculas y minúsculas aquí
-    let iconoSonidoPrincipal = document.getElementById('icono-sonido');
-    if(iconoSonidoPrincipal) iconoSonidoPrincipal.style.display = "block"; 
-
-    estadoFlashcard = 0;
     if(modo === 2) {
         document.getElementById('btn-siguiente').classList.add('hidden');
         renderQuiz();
@@ -1191,28 +1196,42 @@ window.siguiente = function() {
 function renderQuiz() {
     let container = document.getElementById('opciones');
     container.innerHTML = "";
-    quizBloqueado = false;
+    quizBloqueado = false; // Aseguramos desbloqueo al renderizar
     
     let opciones = [actual.es];
-    let poolCategoria = categoriaActual === "Todas" ? masterDict : masterDict.filter(p => p.categoria === categoriaActual);
     
-    while(opciones.length < 4 && opciones.length < poolCategoria.length) {
-        let azar = poolCategoria[Math.floor(Math.random() * poolCategoria.length)].es;
-        if(!opciones.includes(azar)) {
-            opciones.push(azar);
-        }
+    
+    // SOLO palabras de la categoría seleccionada
+let poolCategoria = categoriaActual === "Todas"
+    ? masterDict
+    : masterDict.filter(p => p.categoria === categoriaActual);
+
+// Evita errores si hay menos de 4 palabras
+while(opciones.length < 4 && opciones.length < poolCategoria.length) {
+    let azar = poolCategoria[
+        Math.floor(Math.random() * poolCategoria.length)
+    ].es;
+
+    if(!opciones.includes(azar)) {
+        opciones.push(azar);
     }
+}
     
     opciones.sort(() => Math.random() - 0.5);
+    
     opciones.forEach(o => {
         let btn = document.createElement('button');
         btn.className = 'btn-opcion';
         btn.innerText = o;
+        
         btn.onclick = function() { 
+            // Si ya se hizo clic, se ignora el resto
             if (quizBloqueado) return; 
-            quizBloqueado = true; 
+            
+            quizBloqueado = true; // Bloqueamos el instante en que se presiona
             window.verificar(this, o); 
         };
+        
         container.appendChild(btn);
     });
 }
@@ -1220,21 +1239,29 @@ function renderQuiz() {
 window.verificar = function(btn, op) {
     if(op === actual.es) {
         btn.className = "btn-opcion correcta";
+        
         actual.racha++; 
         if(actual.pesoExtra > 0) {
             actual.pesoExtra--;
         }
+        
+        // BORRAR DEL REGISTRO VISUAL DESPUÉS DE 2 ACIERTOS
         if(actual.racha >= 2) {
             actual.fallos = 0;
         }
+        
         localStorage.setItem('focusData', JSON.stringify(masterDict));
         setTimeout(window.siguiente, 350);
     } else {
         btn.className = "btn-opcion incorrecta";
+        
         actual.racha = 0; 
         actual.pesoExtra += 2;
         actual.fallos++; 
+        
         localStorage.setItem('focusData', JSON.stringify(masterDict));
+        
+        // Quita el color rojo y TE DEJA VOLVER A ELEGIR tras medio segundo
         setTimeout(() => { 
             btn.className = "btn-opcion"; 
             quizBloqueado = false; 
@@ -1242,17 +1269,20 @@ window.verificar = function(btn, op) {
     }
 };
 
-// AJUSTES Y REGISTROS
+// 4. AJUSTES Y REGISTROS
 window.mostrarAjustes = function() {
     document.querySelectorAll('#app > div').forEach(e => e.classList.add('hidden'));
     document.getElementById('ajustes').classList.remove('hidden');
+    
     let categoriasUnicas = [...new Set(masterDict.map(p => p.categoria))];
     let contenedorBotones = document.getElementById('lista-categorias');
     contenedorBotones.innerHTML = "";
     
+    // Botón "Todas"
     let btnTodas = `<button onclick="window.setCategoria('Todas')" class="btn-ajuste ${categoriaActual === 'Todas' ? 'btn-activa' : ''}">Todas</button>`;
     contenedorBotones.innerHTML += btnTodas;
     
+    // Botones individuales por categoría
     categoriasUnicas.forEach(cat => {
         let btnCat = `<button onclick="window.setCategoria('${cat}')" class="btn-ajuste ${categoriaActual === cat ? 'btn-activa' : ''}">${cat}</button>`;
         contenedorBotones.innerHTML += btnCat;
@@ -1261,12 +1291,15 @@ window.mostrarAjustes = function() {
 
 window.setCategoria = function(cat) {
     categoriaActual = cat;
+    
+    // --- CORRECCIÓN 3: REDIRIGIR AL MENÚ PRINCIPAL ---
     window.volver(); 
 };
 
 window.mostrarRegistros = function() {
     document.querySelectorAll('#app > div').forEach(e => e.classList.add('hidden'));
     document.getElementById('registros').classList.remove('hidden');
+    
     let aprendidasTotales = masterDict.filter(p => p.racha >= 3).length;
     document.getElementById('titulo-aprendidas').innerText = `${aprendidasTotales} / ${masterDict.length}`;
     
@@ -1285,6 +1318,7 @@ window.mostrarRegistros = function() {
             </div>
         `;
     });
+    
     document.getElementById('stats-categorias').innerHTML = categoriasHtml;
     
     let conFallos = masterDict.filter(p => p.fallos > 0).sort((a, b) => b.fallos - a.fallos);
@@ -1300,80 +1334,59 @@ window.mostrarRegistros = function() {
                   </tr>`; 
         });
     }
+    
     document.getElementById('tabla-registros').innerHTML = t + "</table>";
 };
 
+// 5. UTILIDADES Y SALTO DIRECTO DESDE EL REGISTRO
 window.practicarPalabra = function(palabraIngles) {
     let palabraEncontrada = masterDict.find(p => p.en === palabraIngles);
     if(!palabraEncontrada) return;
     
     actual = palabraEncontrada;
-    modo = 1; 
+    modo = 1; // Forzar modo Flashcard
     
     document.querySelectorAll('#app > div').forEach(e => e.classList.add('hidden'));
     document.getElementById('juego').classList.remove('hidden');
     
     document.getElementById('texto-palabra').innerText = actual.en;
-    estadoFlashcard = 0;
     document.getElementById('btn-siguiente').classList.remove('hidden');
     document.getElementById('opciones').innerHTML = "";
 };
 
-let estadoFlashcard = 0;
-window.flip = function() {
-    if(modo !== 1) return;
-
-    let t = document.getElementById('texto-palabra');
-    let iconoSonidoPrincipal = document.getElementById('icono-sonido');
-    
-    if(estadoFlashcard === 0){
-        t.innerText = actual.es;
-        estadoFlashcard = 1;
-        if(iconoSonidoPrincipal) iconoSonidoPrincipal.style.display = "block";
-    }
-    else if(estadoFlashcard === 1){
-        t.innerHTML = actual.ejemplo || "Sin ejemplo";
-        estadoFlashcard = 2;
-        // OCULTAR EL ALTAVOZ PRINCIPAL DE LA ESQUINA EN LA PANTALLA DE EJEMPLOS
-        if(iconoSonidoPrincipal) iconoSonidoPrincipal.style.display = "none";
-    }
-    else{
-        t.innerText = actual.en;
-        estadoFlashcard = 0;
-        if(iconoSonidoPrincipal) iconoSonidoPrincipal.style.display = "block";
-    }
+window.flip = function() { 
+    if(modo === 1) { 
+        let t = document.getElementById('texto-palabra');
+        t.innerText = (t.innerText === actual.en) ? actual.es : actual.en; 
+    } 
 };
 
-// --- SONIDO MULTI-USO: Acepta opcionalmente un texto directo ---
-window.hablar = function(textoPersonalizado) {
+// --- CORRECCIÓN 4: SONIDO ADAPTATIVO AL IDIOMA ---
+window.hablar = function() {
     window.speechSynthesis.cancel();
-    
-    // Si recibe texto dinámico (la frase larga), usa ese. Si no, lee la palabra por defecto de la tarjeta.
-    let textoALeer = textoPersonalizado || actual.en;
-    const m = new SpeechSynthesisUtterance(textoALeer);
+
+    const m = new SpeechSynthesisUtterance(actual.en);
     let voces = window.speechSynthesis.getVoices();
 
+    // Siempre usar voz en inglés
     m.lang = 'en-US';
+
     let vozIngles =
-        voces.find(v => v.lang === 'en-US' && v.name.includes('Enhanced')) ||
-        voces.find(v => v.lang === 'en-US' && v.name.includes('Siri')) ||
-        voces.find(v => v.lang === 'en-US' && v.name.includes('Samantha')) ||
         voces.find(v => v.name.includes("Google") && v.lang.includes("en")) ||
         voces.find(v => v.lang.includes("en"));
-        
+
     if (vozIngles) m.voice = vozIngles;
 
-    m.rate = 0.85;
-    m.pitch = 1.0;
+    m.rate = 0.6;
+    m.pitch = 1.2;
+
     window.speechSynthesis.speak(m);
 };
 
-if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
-    speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
-}
-
 window.presionar = function() { document.getElementById('pantalla').classList.add('presionado'); };
 window.soltar = function() { document.getElementById('pantalla').classList.remove('presionado'); };
+
+/* PAUSA / REANUDAR */
 
 document.addEventListener('visibilitychange', () => {
     if(document.hidden){
@@ -1382,5 +1395,7 @@ document.addEventListener('visibilitychange', () => {
         iniciarTimer();
     }
 });
+
 iniciarTimer();
-console.log("App cargada correctamente");
+
+console.log("App cargada");
