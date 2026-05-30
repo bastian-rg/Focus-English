@@ -5,13 +5,21 @@ let masterDict = [
 {
     en: "barely",
     es: "apenas",
-    categoria: "prueba 1", // O la categoría que corresponda
+    categoria: "prueba 1", [cite: 119]
     ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para decir que algo ocurre con muy poca intensidad o cantidad:</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>I barely slept:</b><br><span style="color: #555;">-Apenas dormí</span></li>
-                <li><b>He barely passed the exam:</b><br><span style="color: #555;">-Apenas aprobó el examen</span></li>
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50; width: 100%;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para decir que algo ocurre con muy poca intensidad o cantidad:</p> [cite: 119]
+            <ul style="padding-left: 20px; list-style-type: disc;"> [cite: 120]
+                <li style="margin-bottom: 12px; position: relative; list-style-position: outside;">
+                    <span style="font-weight: bold;">I barely slept</span> 
+                    <span onclick="event.stopPropagation(); window.hablar('I barely slept');" style="cursor: pointer; margin-left: 8px; font-size: 20px;" title="Escuchar oración">🔊</span>
+                    <br><span style="color: #555;">-Apenas dormí</span> [cite: 120]
+                </li>
+                <li style="position: relative; list-style-position: outside;">
+                    <span style="font-weight: bold;">He barely passed the exam</span> 
+                    <span onclick="event.stopPropagation(); window.hablar('He barely passed the exam');" style="cursor: pointer; margin-left: 8px; font-size: 20px;" title="Escuchar oración">🔊</span>
+                    <br><span style="color: #555;">-Apenas aprobó el examen</span> [cite: 120]
+                </li>
             </ul>
         </div>
     `
@@ -1368,45 +1376,65 @@ window.practicarPalabra = function(palabraIngles) {
     document.getElementById('opciones').innerHTML = "";
 };
 
+let estadoFlashcard = 0;
 window.flip = function() {
-    if(modo !== 1) return;
+    if(modo !== 1) return; [cite: 178]
 
-    let t = document.getElementById('texto-palabra');
+    let t = document.getElementById('texto-palabra'); [cite: 179]
+    let iconoSonidoPrincipal = document.getElementById('icono-sonido');
+    
     if(estadoFlashcard === 0){
-        t.innerText = actual.es;
-        estadoFlashcard = 1;
+        t.innerText = actual.es; [cite: 179]
+        estadoFlashcard = 1; [cite: 179]
+        if(iconoSonidoPrincipal) iconoSonidoPrincipal.style.display = "block"; // Asegura que se vea
     }
-    // CAMBIO AQUÍ: Usar innerHTML para soportar el formato de lista
+    // ESTADO DE EJEMPLOS
     else if(estadoFlashcard === 1){
-        t.innerHTML = actual.ejemplo || "Sin ejemplo";
-        estadoFlashcard = 2;
+        t.innerHTML = actual.ejemplo || "Sin ejemplo"; [cite: 180, 181]
+        estadoFlashcard = 2; [cite: 181]
+        
+        // Desaparecer el icono de sonido principal de la esquina superior
+        if(iconoSonidoPrincipal) iconoSonidoPrincipal.style.display = "none";
     }
     else{
-        t.innerText = actual.en;
-        estadoFlashcard = 0;
+        t.innerText = actual.en; [cite: 181]
+        estadoFlashcard = 0; [cite: 182]
+        
+        // Al regresar al inicio, vuelve a aparecer el icono de sonido principal
+        if(iconoSonidoPrincipal) iconoSonidoPrincipal.style.display = "block";
     }
 };
 
-// --- CORRECCIÓN 4: SONIDO ADAPTATIVO AL IDIOMA ---
-window.hablar = function() {
-    window.speechSynthesis.cancel();
+// --- SONIDO ADAPTATIVO: Permite reproducir palabras sueltas u oraciones personalizadas ---
+window.hablar = function(textoPersonalizado) {
+    window.speechSynthesis.cancel(); [cite: 182]
 
-    const m = new SpeechSynthesisUtterance(actual.en);
-    let voces = window.speechSynthesis.getVoices();
+    // Si pasamos un texto personalizado (la oración del ejemplo), lee ese. Si no, lee la palabra actual.
+    let textoALeer = textoPersonalizado || actual.en; [cite: 183]
+    const m = new SpeechSynthesisUtterance(textoALeer); [cite: 183]
+    let voces = window.speechSynthesis.getVoices(); [cite: 183]
 
-    // Siempre usar voz en inglés
-    m.lang = 'en-US';
-
+    m.lang = 'en-US'; [cite: 183]
     let vozIngles =
-        voces.find(v => v.name.includes("Google") && v.lang.includes("en")) ||
-        voces.find(v => v.lang.includes("en"));
+        voces.find(v => v.lang === 'en-US' && v.name.includes('Enhanced')) ||
+        voces.find(v => v.lang === 'en-US' && v.name.includes('Siri')) ||
+        voces.find(v => v.lang === 'en-US' && v.name.includes('Samantha')) ||
+        voces.find(v => v.name.includes("Google") && v.lang.includes("en")) || [cite: 184]
+        voces.find(v => v.lang.includes("en")); [cite: 184]
 
-    if (vozIngles) m.voice = vozIngles;
+    if (vozIngles) m.voice = vozIngles; [cite: 185]
 
-    m.rate = 0.6;
-    m.pitch = 1.2;
+    m.rate = 0.85; // Ajuste óptimo de velocidad humana natural [cite: 185]
+    m.pitch = 1.0; // Tono realista [cite: 185]
 
-    window.speechSynthesis.speak(m);
+    window.speechSynthesis.speak(m); [cite: 185]
+};
+// Asegurar que el icono principal empiece visible al pasar de palabra
+let siguienteOriginal = window.siguiente;
+window.siguiente = function() {
+    siguienteOriginal(); [cite: 141]
+    let iconoSonidoPrincipal = document.getElementById('icono-sonido');
+    if(iconoSonidoPrincipal) iconoSonidoPrincipal.style.display = "block";
 };
 
 window.presionar = function() { document.getElementById('pantalla').classList.add('presionado'); };
