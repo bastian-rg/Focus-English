@@ -1183,6 +1183,7 @@ window.siguiente = function() {
     actual = mazoPonderado[Math.floor(Math.random() * mazoPonderado.length)];
 
     document.getElementById('texto-palabra').innerText = actual.en;
+    estadoFlashcard = 0;
     
     if(modo === 2) {
         document.getElementById('btn-siguiente').classList.add('hidden');
@@ -1350,15 +1351,30 @@ window.practicarPalabra = function(palabraIngles) {
     document.getElementById('juego').classList.remove('hidden');
     
     document.getElementById('texto-palabra').innerText = actual.en;
+    estadoFlashcard = 0;
     document.getElementById('btn-siguiente').classList.remove('hidden');
     document.getElementById('opciones').innerHTML = "";
 };
 
-window.flip = function() { 
-    if(modo === 1) { 
-        let t = document.getElementById('texto-palabra');
-        t.innerText = (t.innerText === actual.en) ? actual.es : actual.en; 
-    } 
+let estadoFlashcard = 0;
+
+window.flip = function() {
+    if(modo !== 1) return;
+
+    let t = document.getElementById('texto-palabra');
+
+    if(estadoFlashcard === 0){
+        t.innerText = actual.es;
+        estadoFlashcard = 1;
+    }
+    else if(estadoFlashcard === 1){
+        t.innerText = actual.ejemplo || "Sin ejemplo";
+        estadoFlashcard = 2;
+    }
+    else{
+        t.innerText = actual.en;
+        estadoFlashcard = 0;
+    }
 };
 
 // --- CORRECCIÓN 4: SONIDO ADAPTATIVO AL IDIOMA ---
