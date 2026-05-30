@@ -1381,7 +1381,7 @@ window.flip = function() {
         estadoFlashcard = 1;
     }
     else if(estadoFlashcard === 1){
-        t.innerText = actual.ejemplo || "Sin ejemplo";
+        t.innerHTML = actual.ejemplo || "Sin ejemplo";
         estadoFlashcard = 2;
     }
     else{
