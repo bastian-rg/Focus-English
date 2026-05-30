@@ -2,24 +2,7 @@
 let masterDict = [
     // ⚠️ PEGA AQUÍ ADENTRO TUS 1000 PALABRAS EXACTAMENTE COMO LAS TIENES
     
-{
-  en: "barely",
-  es: "apenas",
-  ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para decir que algo ocurre con muy poca intensidad o cantidad:</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>I barely slept:</b><br><span style="color: #555;">-Apenas dormí</span></li>
-                <li><b>He barely passed the exam:</b><br><span style="color: #555;">-Apenas aprobó el examen</span></li>
-            </ul>
-        </div>
-    `,
-  categoria: "Prueba 1",
-  racha: 0,
-  pesoExtra: 0,
-  fallos: 0
-},
-    
+
 {en: "A", es: "Un / Una (Antes De Sonido Consonante)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "An", es: "Un / Una (Antes De Sonido Vocal)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "The", es: "El / La / Los / Las", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
@@ -1049,7 +1032,7 @@ let masterDict = [
 
 ];
 
-/ --- CORRECCIÓN 1: LIMPIEZA AUTOMÁTICA DE ESPACIOS ---
+// --- CORRECCIÓN 1: LIMPIEZA AUTOMÁTICA DE ESPACIOS ---
 // Esto soluciona el problema de que las flashcards se queden en blanco si hay un "espacio extra"
 masterDict = masterDict.map(p => {
     return {
@@ -1200,7 +1183,6 @@ window.siguiente = function() {
     actual = mazoPonderado[Math.floor(Math.random() * mazoPonderado.length)];
 
     document.getElementById('texto-palabra').innerText = actual.en;
-    estadoFlashcard = 0;
     
     if(modo === 2) {
         document.getElementById('btn-siguiente').classList.add('hidden');
@@ -1368,33 +1350,17 @@ window.practicarPalabra = function(palabraIngles) {
     document.getElementById('juego').classList.remove('hidden');
     
     document.getElementById('texto-palabra').innerText = actual.en;
-    estadoFlashcard = 0;
     document.getElementById('btn-siguiente').classList.remove('hidden');
     document.getElementById('opciones').innerHTML = "";
 };
 
-let estadoFlashcard = 0;
-
-window.flip = function() {
-    if(modo !== 1) return;
-
-    let t = document.getElementById('texto-palabra');
-
-    if(estadoFlashcard === 0){
-        t.innerText = actual.es;
-        estadoFlashcard = 1;
-    }
-    else if(estadoFlashcard === 1){
-        t.innerText = actual.ejemplo || "Sin ejemplo";
-        estadoFlashcard = 2;
-    }
-    else{
-        t.innerText = actual.en;
-        estadoFlashcard = 0;
-    }
+window.flip = function() { 
+    if(modo === 1) { 
+        let t = document.getElementById('texto-palabra');
+        t.innerText = (t.innerText === actual.en) ? actual.es : actual.en; 
+    } 
 };
 
-// --- CORRECCIÓN 4: SONIDO ADAPTATIVO AL IDIOMA ---
 // --- CORRECCIÓN 4: SONIDO ADAPTATIVO AL IDIOMA ---
 window.hablar = function() {
     window.speechSynthesis.cancel();
@@ -1402,38 +1368,20 @@ window.hablar = function() {
     const m = new SpeechSynthesisUtterance(actual.en);
     let voces = window.speechSynthesis.getVoices();
 
-    // Siempre usar idioma inglés estadounidense
+    // Siempre usar voz en inglés
     m.lang = 'en-US';
 
-    // Buscador inteligente de la mejor voz disponible
     let vozIngles =
-        // 1. Intentar buscar voces premium mejoradas de Apple (iPhone)
-        voces.find(v => v.lang === 'en-US' && v.name.includes('Enhanced')) ||
-        // 2. Si no hay, intentar usar la voz de Siri (iPhone)
-        voces.find(v => v.lang === 'en-US' && v.name.includes('Siri')) ||
-        // 3. Si no hay, usar a 'Samantha' (La voz de mujer clásica y ultra clara de Apple)
-        voces.find(v => v.lang === 'en-US' && v.name.includes('Samantha')) ||
-        // 4. Si es Android, usar la voz de Google por defecto
         voces.find(v => v.name.includes("Google") && v.lang.includes("en")) ||
-        // 5. Emergencia por si falla todo lo anterior
         voces.find(v => v.lang.includes("en"));
 
     if (vozIngles) m.voice = vozIngles;
 
-    // --- MEJORA DE PRONUNCIACIÓN PARA APRENDIZAJE ---
-    // Subido de 0.6 a 0.85 (0.6 era demasiado lento y hacía sonar la voz robótica/deformada)
-    m.rate = 0.85; 
-    
-    // Bajado de 1.2 a 1.0 (El tono 1.0 es el tono humano natural, 1.2 hacía sonar la voz chillona)
-    m.pitch = 1.0; 
+    m.rate = 0.6;
+    m.pitch = 1.2;
 
     window.speechSynthesis.speak(m);
 };
-
-// Asegurar que iPhone cargue la lista de voces a tiempo
-if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
-    speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
-}
 
 window.presionar = function() { document.getElementById('pantalla').classList.add('presionado'); };
 window.soltar = function() { document.getElementById('pantalla').classList.remove('presionado'); };
@@ -1449,3 +1397,5 @@ document.addEventListener('visibilitychange', () => {
 });
 
 iniciarTimer();
+
+console.log("App cargada");
