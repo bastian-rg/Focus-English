@@ -2,7 +2,19 @@
 let masterDict = [
     // ⚠️ PEGA AQUÍ ADENTRO TUS 1000 PALABRAS EXACTAMENTE COMO LAS TIENES
     
-
+{
+  en: "barely",
+  es: "apenas",
+  ejemplo: `Se usa para decir que algo ocurre con muy poca intensidad o cantidad,
+  lgo sucede, pero por muy poco.
+I barely slept → Apenas dormí
+He barely passed the exam → Apenas aprobó el examen`,
+  categoria: "Prueba 1",
+  racha: 0,
+  pesoExtra: 0,
+  fallos: 0
+},
+    
 {en: "A", es: "Un / Una (Antes De Sonido Consonante)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "An", es: "Un / Una (Antes De Sonido Vocal)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "The", es: "El / La / Los / Las", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
@@ -1183,6 +1195,7 @@ window.siguiente = function() {
     actual = mazoPonderado[Math.floor(Math.random() * mazoPonderado.length)];
 
     document.getElementById('texto-palabra').innerText = actual.en;
+    estadoFlashcard = 0;
     
     if(modo === 2) {
         document.getElementById('btn-siguiente').classList.add('hidden');
@@ -1350,15 +1363,30 @@ window.practicarPalabra = function(palabraIngles) {
     document.getElementById('juego').classList.remove('hidden');
     
     document.getElementById('texto-palabra').innerText = actual.en;
+    estadoFlashcard = 0;
     document.getElementById('btn-siguiente').classList.remove('hidden');
     document.getElementById('opciones').innerHTML = "";
 };
 
-window.flip = function() { 
-    if(modo === 1) { 
-        let t = document.getElementById('texto-palabra');
-        t.innerText = (t.innerText === actual.en) ? actual.es : actual.en; 
-    } 
+let estadoFlashcard = 0;
+
+window.flip = function() {
+    if(modo !== 1) return;
+
+    let t = document.getElementById('texto-palabra');
+
+    if(estadoFlashcard === 0){
+        t.innerText = actual.es;
+        estadoFlashcard = 1;
+    }
+    else if(estadoFlashcard === 1){
+        t.innerText = actual.ejemplo || "Sin ejemplo";
+        estadoFlashcard = 2;
+    }
+    else{
+        t.innerText = actual.en;
+        estadoFlashcard = 0;
+    }
 };
 
 // --- CORRECCIÓN 4: SONIDO ADAPTATIVO AL IDIOMA ---
