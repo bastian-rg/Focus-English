@@ -1451,3 +1451,25 @@ document.addEventListener('visibilitychange', () => {
 iniciarTimer();
 
 console.log("App cargada");
+
+// Función para detectar la versión del CSS e inyectarla en el menú
+function cargarVersionCSS() {
+    // Busca la etiqueta link que apunte a tu style.css
+    const linkCSS = document.querySelector('link[href*="style.css"]');
+    const contenedorVersion = document.getElementById('version-app');
+    
+    if (linkCSS && contenedorVersion) {
+        const url = linkCSS.getAttribute('href');
+        // Usamos una expresión regular para extraer lo que esté después de "?v="
+        const coincidencia = url.match(/\?v=([0-9.]+)/);
+        
+        if (coincidencias && coincidencia[1]) {
+            contenedorVersion.innerText = `v${coincidencia[1]}`;
+        } else {
+            contenedorVersion.innerText = "v1.0"; // Por si no encuentra el parámetro ?v=
+        }
+    }
+}
+
+// Ejecutar la función automáticamente al cargar la app
+cargarVersionCSS();
