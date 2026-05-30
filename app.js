@@ -1049,7 +1049,7 @@ let masterDict = [
 
 ];
 
-// --- CORRECCIÓN 1: LIMPIEZA AUTOMÁTICA DE ESPACIOS ---
+/ --- CORRECCIÓN 1: LIMPIEZA AUTOMÁTICA DE ESPACIOS ---
 // Esto soluciona el problema de que las flashcards se queden en blanco si hay un "espacio extra"
 masterDict = masterDict.map(p => {
     return {
@@ -1385,7 +1385,7 @@ window.flip = function() {
         estadoFlashcard = 1;
     }
     else if(estadoFlashcard === 1){
-        t.innerHTML = actual.ejemplo || "Sin ejemplo";
+        t.innerText = actual.ejemplo || "Sin ejemplo";
         estadoFlashcard = 2;
     }
     else{
@@ -1449,5 +1449,3 @@ document.addEventListener('visibilitychange', () => {
 });
 
 iniciarTimer();
-
-console.log("App cargada");
