@@ -1446,10 +1446,22 @@ window.flip = function() {
         t.innerHTML = actual.ejemplo || "Sin ejemplo";
         estadoFlashcard = 2;
     }
-    else{
-        t.innerText = actual.en;
-        estadoFlashcard = 0;
-    }
+    else {
+    t.innerHTML = `
+        <div>
+            ${actual.en}
+            <button onclick="playAudio('${actual.en.replace(/'/g, "\\'")}')">
+                🔊
+            </button>
+        </div>
+    `;
+    estadoFlashcard = 0;
+}
+};
+window.playAudio = function(text) {
+    const msg = new SpeechSynthesisUtterance(text);
+    msg.lang = "en-US";
+    speechSynthesis.speak(msg);
 };
 
 // --- CORRECCIÓN 4: SONIDO ADAPTATIVO AL IDIOMA ---
