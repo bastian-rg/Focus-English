@@ -1460,7 +1460,7 @@ window.playAudio = function(text) {
     msg.lang = "en-US";
 
     // 1er toque lento, 2do más fluido
-    msg.rate = velocidadLenta ? 0.6 : 1.15;
+    msg.rate = velocidadLenta ? 0.8 : 1.00;
 
     velocidadLenta = !velocidadLenta;
 
