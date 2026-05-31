@@ -1459,14 +1459,22 @@ window.hablar = function() {
     const m = new SpeechSynthesisUtterance(actual.en);
     let voces = window.speechSynthesis.getVoices();
 
-    // Siempre usar voz en inglés
     m.lang = 'en-US';
 
-    let vozIngles =
-        voces.find(v => v.name.includes("Google") && v.lang.includes("en")) ||
-        voces.find(v => v.lang.includes("en"));
+    // Lista de nombres comunes de voces femeninas en diferentes plataformas
+    let vozFemenina = voces.find(v => 
+        v.lang.includes("en") && (
+            v.name.includes("Zira") ||        // Windows
+            v.name.includes("Samantha") ||    // macOS / iOS
+            v.name.includes("Victoria") ||    // macOS
+            v.name.includes("Google US English") || // Chrome (suele ser mujer por defecto)
+            v.name.toLowerCase().includes("female") // Algunos navegadores móviles
+        )
+    ) || voces.find(v => v.lang.includes("en")); // Respaldo: cualquier voz en inglés si no encuentra las anteriores
 
-    if (vozIngles) m.voice = vozIngles;
+    if (vozFemenina) {
+        m.voice = vozFemenina;
+    }
 
     m.rate = 0.6;
     m.pitch = 1.2;
@@ -1486,6 +1494,7 @@ document.addEventListener('visibilitychange', () => {
         iniciarTimer();
     }
 });
+
 
 iniciarTimer();
 
