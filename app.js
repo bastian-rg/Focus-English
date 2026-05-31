@@ -46,6 +46,37 @@ let masterDict = [
         </div>
     `
 },
+    {
+    en: "A",
+    es: "Un / Una (Antes De Sonido Consonante)",
+    categoria: "prueba",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para decir un / una antes de palabras con sonido consonante.</p>
+            <ul style="padding-left: 20px; list-style-type: disc;">
+                <li style="margin-bottom: 8px;"><b>I have a book</b><br><span style="color: #555;">-Tengo un libro.</span></li>
+                <li><b>She wants a car</b><br><span style="color: #555;">-Ella quiere un carro</span></li>
+</li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "An",
+    es: "Un / Una (Antes De Sonido Vocal)",
+    categoria: "prueba",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para decir un / una antes de palabras que empiezan con sonido vocal.</p>
+            <ul style="padding-left: 20px; list-style-type: disc;">
+                <li style="margin-bottom: 8px;"><b>She has an apple</b><br><span style="color: #555;">-Ella tiene una manzana.</span></li>
+                <li><b>He is an actor</b><br><span style="color: #555;">-Él es un actor.</span></li>
+</li>
+            </ul>
+        </div>
+    `
+},
+
 
 {en: "A", es: "Un / Una (Antes De Sonido Consonante)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "An", es: "Un / Una (Antes De Sonido Vocal)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
