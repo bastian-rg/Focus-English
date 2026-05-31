@@ -36,10 +36,10 @@ let masterDict = [
     categoria: "prueba",
     ejemplo: `
         <div style=""font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;"">
-            <p style=""margin-bottom: 15px; font-size: 20px;"">Se usa para mostrar contraste o una idea opuesta.</p>
-            <ul style=""padding-left: 20px; list-style-type: disc;"">
-                <li style=""margin-bottom: 8px;""><b>I want to go, but I am tired</b><br><span style=""color: #555;"">-Quiero ir, pero estoy cansado.</span></li>
-                <li style=""margin-bottom: 8px;""><b>She is young, but very smart</b><br><span style=""color: #555;"">-Ella es joven, pero muy inteligente.</span></li>
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para mostrar contraste o una idea opuesta.</p>
+            <ul style="padding-left: 20px; list-style-type: disc;">
+                <li style="margin-bottom: 8px;"><b>I want to go, but I am tired</b><br><span style="color: #555;">-Quiero ir, pero estoy cansado.</span></li>
+                <li style="margin-bottom: 8px;"><b>She is young, but very smart</b><br><span style="color: #555;">-Ella es joven, pero muy inteligente.</span></li>
             </ul>
         </div>
     `
