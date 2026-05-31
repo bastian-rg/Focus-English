@@ -1437,17 +1437,21 @@ window.flip = function() {
     if(modo !== 1) return;
 
     let t = document.getElementById('texto-palabra');
+    let icono = document.getElementById('icono-sonido');
 
     if(estadoFlashcard === 0){
         t.innerText = actual.es;
+        icono.style.display = "none";
         estadoFlashcard = 1;
     }
     else if(estadoFlashcard === 1){
         t.innerHTML = agregarAudioEjemplos(actual.ejemplo || "Sin ejemplo");
+        icono.style.display = "none"; // ocultar en ejemplos
         estadoFlashcard = 2;
     }
     else{
         t.innerText = actual.en;
+        icono.style.display = "flex"; // mostrar en inglés
         estadoFlashcard = 0;
     }
 };
@@ -1460,7 +1464,7 @@ window.playAudio = function(text) {
     msg.lang = "en-US";
 
     // 1er toque lento, 2do más fluido
-    msg.rate = velocidadLenta ? 0.8 : 1.00;
+    msg.rate = velocidadLenta ? 0.75 : 1.1;
 
     velocidadLenta = !velocidadLenta;
 
