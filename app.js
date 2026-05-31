@@ -31,9 +31,9 @@ let masterDict = [
     `
 },
     "{
-    en: ""but"",
-    es: ""pero"",
-    categoria: ""prueba"",
+    en: "but",
+    es: "pero",
+    categoria: "prueba",
     ejemplo: `
         <div style=""font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;"">
             <p style=""margin-bottom: 15px; font-size: 20px;"">Se usa para mostrar contraste o una idea opuesta.</p>
