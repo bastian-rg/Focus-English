@@ -17,29 +17,31 @@ let masterDict = [
     `
 },
 {
-    en: "but",
-    es: "pero",
-    categoria: "prueba", // O la categoría que corresponda
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para mostrar contraste o una idea opuesta.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>I want to go, but I am tired:</b><br><span style="color: #555;">-Quiero ir, pero estoy cansado.</span></li>
-                <li><b>She is young, but very smart:</b><br><span style="color: #555;">-Ella es joven, pero muy inteligente.</span></li>
-            </ul>
-        </div>
-    `
-},
-    {
-    en: "but",
-    es: "pero",
+    en: "She",
+    es: "Ella",
     categoria: "prueba",
     ejemplo: `
-        <div style=""font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;"">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para mostrar contraste o una idea opuesta.</p>
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para hablar de una mujer o niña.</p>
             <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>I want to go, but I am tired</b><br><span style="color: #555;">-Quiero ir, pero estoy cansado.</span></li>
-                <li><b>She is young, but very smart</b><br><span style="color: #555;">-Ella es joven, pero muy inteligente.</span></li>
+                <li style="margin-bottom: 8px;"><b>She is my friend</b><br><span style="color: #555;">-Ella es mi amiga.</span></li>
+                <li><b>She likes music</b><br><span style="color: #555;">-A ella le gusta la música.</span></li>
+</li>
+            </ul>
+        </div>
+    `
+},
+    {
+    en: "Either",
+    es: "Cualquiera de los dos / Tampoco",
+    categoria: "prueba",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para hablar de una opción entre dos o para decir tampoco en oraciones negativas.</p>
+            <ul style="padding-left: 20px; list-style-type: disc;">
+                <li style="margin-bottom: 8px;"><b>You can choose either option</b><br><span style="color: #555;">-Puedes elegir cualquiera de las dos opciones.</span></li>
+                <li><b>I don't like coffee, and she doesn't either</b><br><span style="color: #555;">-No me gusta el café, y a ella tampoco.</span></li>
+</li>
             </ul>
         </div>
     `
