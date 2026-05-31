@@ -1441,17 +1441,17 @@ window.flip = function() {
 
     if(estadoFlashcard === 0){
         t.innerText = actual.es;
-        icono.style.display = "none";
+        icono.style.display = "";
         estadoFlashcard = 1;
     }
     else if(estadoFlashcard === 1){
         t.innerHTML = agregarAudioEjemplos(actual.ejemplo || "Sin ejemplo");
-        icono.style.display = "none"; // ocultar en ejemplos
+        icono.style.display = "none"; // ocultar solo en ejemplos
         estadoFlashcard = 2;
     }
     else{
         t.innerText = actual.en;
-        icono.style.display = "flex"; // mostrar en inglés
+        icono.style.display = "";
         estadoFlashcard = 0;
     }
 };
