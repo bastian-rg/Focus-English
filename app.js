@@ -1451,20 +1451,22 @@ window.flip = function() {
         estadoFlashcard = 0;
     }
 };
-let velocidadLenta = true;
 
+let velocidadLenta = true;
 window.playAudio = function(text) {
     speechSynthesis.cancel();
 
     const msg = new SpeechSynthesisUtterance(text);
     msg.lang = "en-US";
 
-    // alterna velocidad
-    msg.rate = velocidadLenta ? 0.75 : 1;
+    // 1er toque lento, 2do más fluido
+    msg.rate = velocidadLenta ? 0.6 : 1.15;
 
     velocidadLenta = !velocidadLenta;
 
-    speechSynthesis.speak(msg);
+    setTimeout(() => {
+        speechSynthesis.speak(msg);
+    }, 50);
 };
 
 function agregarAudioEjemplos(html) {
