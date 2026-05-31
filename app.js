@@ -1443,26 +1443,29 @@ window.flip = function() {
         estadoFlashcard = 1;
     }
     else if(estadoFlashcard === 1){
-        t.innerHTML = actual.ejemplo || "Sin ejemplo";
+        t.innerHTML = agregarAudioEjemplos(actual.ejemplo || "Sin ejemplo");
         estadoFlashcard = 2;
     }
-    else {
-    t.innerHTML = `
-        <div>
-            ${actual.en}
-            <button onclick="playAudio('${actual.en.replace(/'/g, "\\'")}')">
-                🔊
-            </button>
-        </div>
-    `;
-    estadoFlashcard = 0;
-}
+    else{
+        t.innerText = actual.en;
+        estadoFlashcard = 0;
+    }
 };
 window.playAudio = function(text) {
     const msg = new SpeechSynthesisUtterance(text);
     msg.lang = "en-US";
     speechSynthesis.speak(msg);
 };
+
+function agregarAudioEjemplos(html) {
+    return html.replace(
+        /<b>(.*?)<\/b>/g,
+        (match, texto) =>
+            `<b>${texto}</b>
+            <button onclick="playAudio('${texto.replace(/'/g,"\\'")}')" 
+            style="margin-left:5px;">🔊</button>`
+    );
+}
 
 // --- CORRECCIÓN 4: SONIDO ADAPTATIVO AL IDIOMA ---
 window.hablar = function() {
