@@ -1462,8 +1462,11 @@ function agregarAudioEjemplos(html) {
         /<b>(.*?)<\/b>/g,
         (match, texto) =>
             `<b>${texto}</b>
-            <button onclick="playAudio('${texto.replace(/'/g,"\\'")}')" 
-            style="margin-left:5px;">🔊</button>`
+            <button 
+                onclick="event.stopPropagation(); playAudio('${texto.replace(/'/g,"\\'")}')"
+                style="margin-left:5px; cursor:pointer;">
+                🔊
+            </button>`
     );
 }
 
