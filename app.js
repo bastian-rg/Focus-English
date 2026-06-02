@@ -81,7 +81,7 @@ let masterDict = [
 {
     en: "Feel",
     es: "Sentir / Sentirse",
-    categoria: "Palabras Funcionales",
+    categoria: "prueba",
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar sentimientos, emociones o estados físicos.</p>
@@ -96,7 +96,7 @@ let masterDict = [
 {
     en: "Fight",
     es: "Pelear / Luchar",
-    categoria: "Palabras Funcionales",
+    categoria: "prueba",
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para hablar de pelear, discutir o luchar por algo.</p>
@@ -110,7 +110,7 @@ let masterDict = [
 {
     en: "Fill",
     es: "Llenar / Completar",
-    categoria: "Palabras Funcionales",
+    categoria: "prueba",
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar que se está llenando o completando algo.</p>
@@ -125,7 +125,7 @@ let masterDict = [
 {
     en: "Find",
     es: "Encontrar / Localizar",
-    categoria: "Palabras Funcionales",
+    categoria: "prueba",
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando localizas algo que estabas buscando o descubres algo.</p>
@@ -139,7 +139,7 @@ let masterDict = [
 {
     en: "Finish",
     es: "Terminar / Acabar",
-    categoria: "Palabras Funcionales",
+    categoria: "prueba",
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar que se ha terminado una tarea, acción o evento.</p>
@@ -153,8 +153,8 @@ let masterDict = [
 },
 {
     en: "Fix",
-    es: "Arreglar / Reparar / Solucionar",
-    categoria: "Palabras Funcionales",
+    es: "Reparar / Solucionar",
+    categoria: "prueba",
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa principalmente para reparar algo roto o solucionar un problema.</p>
@@ -168,7 +168,7 @@ let masterDict = [
 {
     en: "Fly",
     es: "Volar / Mosca",
-    categoria: "Palabras Funcionales",
+    categoria: "prueba",
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción de volar. También significa "mosca" como sustantivo.</p>
@@ -182,7 +182,7 @@ let masterDict = [
 {
     en: "Fold",
     es: "Doblar",
-    categoria: "Palabras Funcionales",
+    categoria: "prueba",
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción de doblar materiales flexibles como ropa o papel.</p>
@@ -196,7 +196,7 @@ let masterDict = [
 {
     en: "Follow",
     es: "Seguir",
-    categoria: "Palabras Funcionales",
+    categoria: "prueba",
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para ir detrás de alguien, continuar un camino o seguir a alguien en redes.</p>
@@ -210,7 +210,7 @@ let masterDict = [
 {
     en: "Forbid",
     es: "Prohibir",
-    categoria: "Palabras Funcionales",
+    categoria: "prueba",
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para prohibir formalmente que se haga algo.</p>
@@ -221,7 +221,6 @@ let masterDict = [
         </div>
     `
 },
-
 {en: "A", es: "Un / Una (Antes De Sonido Consonante)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "An", es: "Un / Una (Antes De Sonido Vocal)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "The", es: "El / La / Los / Las", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
