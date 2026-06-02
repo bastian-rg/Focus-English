@@ -2689,6 +2689,7 @@ window.practicarPalabra = function(palabraIngles) {
 
 let estadoFlashcard = 0;
 window.speechSynthesis.cancel(); // Detiene cualquier audio anterior al girar
+
 window.flip = function() {
     if(modo !== 1) return;
 
@@ -2697,21 +2698,17 @@ window.flip = function() {
 
     if(estadoFlashcard === 0){
         t.innerText = actual.es;
-        icono.style.display = "";
+        icono.style.visibility = "visible"; // Cambiado a visibility
         estadoFlashcard = 1;
     }
     else if(estadoFlashcard === 1){
-        // Usamos una pequeña pausa para asegurar que el DOM esté listo
-        // y aplicamos la función de audio procesada
-        let contenidoEjemplo = actual.ejemplo || "Sin ejemplo";
-        t.innerHTML = agregarAudioEjemplos(contenidoEjemplo);
-        
-        icono.style.display = "none"; // Ocultar el icono principal
+        t.innerHTML = agregarAudioEjemplos(actual.ejemplo || "Sin ejemplo");
+        icono.style.visibility = "hidden"; // Ocultar, pero mantener el espacio
         estadoFlashcard = 2;
     }
     else{
         t.innerText = actual.en;
-        icono.style.display = "";
+        icono.style.visibility = "visible";
         estadoFlashcard = 0;
     }
 };
