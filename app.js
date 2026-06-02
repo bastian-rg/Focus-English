@@ -3,89 +3,13 @@ let masterDict = [
     // ⚠️ PEGA AQUÍ ADENTRO TUS 1000 PALABRAS EXACTAMENTE COMO LAS TIENES
 
 {
-    en: "barely",
-    es: "apenas",
-    categoria: "prueba", // O la categoría que corresponda
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para decir que algo ocurre con muy poca intensidad o cantidad:</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>I barely slept:</b><br><span style="color: #555;">-Apenas dormí</span></li>
-                <li><b>He barely passed the exam:</b><br><span style="color: #555;">-Apenas aprobó el examen</span></li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "She",
-    es: "Ella",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para hablar de una mujer o niña.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>She is my friend</b><br><span style="color: #555;">-Ella es mi amiga.</span></li>
-                <li><b>She likes music</b><br><span style="color: #555;">-A ella le gusta la música.</span></li>
-</li>
-            </ul>
-        </div>
-    `
-},
-    {
-    en: "Either",
-    es: "Cualquiera de los dos / Tampoco",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para hablar de una opción entre dos o para decir tampoco en oraciones negativas.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>You can choose either option</b><br><span style="color: #555;">-Puedes elegir cualquiera de las dos opciones.</span></li>
-                <li><b>I don't like coffee, and she doesn't either</b><br><span style="color: #555;">-No me gusta el café, y a ella tampoco.</span></li>
-</li>
-            </ul>
-        </div>
-    `
-},
-    {
-    en: "A",
-    es: "Un / Una (Antes De Sonido Consonante)",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para decir un / una antes de palabras con sonido consonante.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>I have a book</b><br><span style="color: #555;">-Tengo un libro.</span></li>
-                <li><b>She wants a car</b><br><span style="color: #555;">-Ella quiere un carro</span></li>
-</li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "An",
-    es: "Un / Una (Antes De Sonido Vocal)",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para decir un / una antes de palabras que empiezan con sonido vocal.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>She has an apple</b><br><span style="color: #555;">-Ella tiene una manzana.</span></li>
-                <li><b>He is an actor</b><br><span style="color: #555;">-Él es un actor.</span></li>
-</li>
-            </ul>
-        </div>
-    `
-},
-
-
-{
     en: "Feel",
     es: "Sentir / Sentirse",
     categoria: "prueba",
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar sentimientos, emociones o estados físicos.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
+            <ul style="padding-left: 0px; list-style-type: none;">
                 <li style="margin-bottom: 8px;"><b>I feel happy today.</b><br><span style="color: #555;">-Me siento feliz hoy.</span></li>
                 <li><b>Do you feel cold?</b><br><span style="color: #555;">-¿Tienes frío?</span></li>
             </ul>
@@ -100,7 +24,7 @@ let masterDict = [
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para hablar de pelear, discutir o luchar por algo.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
+            <ul style="padding-left: 0px; list-style-type: none;">
                 <li style="margin-bottom: 8px;"><b>They fight a lot.</b><br><span style="color: #555;">-Ellos pelean mucho.</span></li>
                 <li><b>Fight for your dreams.</b><br><span style="color: #555;">-Lucha por tus sueños.</span></li>
             </ul>
@@ -114,7 +38,7 @@ let masterDict = [
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar que se está llenando o completando algo.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
+            <ul style="padding-left: 0px; list-style-type: none;">
                 <li style="margin-bottom: 8px;"><b>Fill the glass with water.</b><br><span style="color: #555;">-Llena el vaso con agua.</span></li>
                 <li><b>Fill out this form.</b><br><span style="color: #555;">-Llena este formulario.</span></li>
             </ul>
@@ -129,98 +53,8 @@ let masterDict = [
     ejemplo: `
         <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
             <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando localizas algo que estabas buscando o descubres algo.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>I can't find my keys.</b><br><span style="color: #555;">-No encuentro mis llaves.</span></li>
-                <li><b>Did you find a job?</b><br><span style="color: #555;">-¿Encontraste un trabajo?.</span></li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "Finish",
-    es: "Terminar / Acabar",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar que se ha terminado una tarea, acción o evento.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>I need to finish my homework.</b><br><span style="color: #555;">-Necesito terminar mi tarea.</span></li>
-                <li><b>What time does the movie finish?</b><br><span style="color: #555;">-¿A qué hora termina la película?.</span></li>
-            </ul>
-            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Aclaración: A diferencia de End (que habla del límite o final de algo), Finish se enfoca en completar una acción.</p>
-        </div>
-    `
-},
-{
-    en: "Fix",
-    es: "Reparar / Solucionar",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa principalmente para reparar algo roto o solucionar un problema.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>Can you fix my phone?</b><br><span style="color: #555;">-¿Puedes reparar mi teléfono?.</span></li>
-                <li><b>Let's fix this problem.</b><br><span style="color: #555;">-Vamos a solucionar este problema.</span></li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "Fly",
-    es: "Volar / Mosca",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción de volar. También significa "mosca" como sustantivo.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>Birds can fly high.</b><br><span style="color: #555;">-Los pájaros pueden volar alto.</span></li>
-                <li><b>There is a fly in my room.</b><br><span style="color: #555;">-Hay una mosca en mi habitación.</span></li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "Fold",
-    es: "Doblar",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción de doblar materiales flexibles como ropa o papel.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>Please, fold your clothes.</b><br><span style="color: #555;">-Por favor, dobla tu ropa.</span></li>
-                <li><b>Fold the paper in half.</b><br><span style="color: #555;">-Dobla el papel por la mitad.</span></li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "Follow",
-    es: "Seguir",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para ir detrás de alguien, continuar un camino o seguir a alguien en redes.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>Follow me, please.</b><br><span style="color: #555;">-Sígueme, por favor.</span></li>
-                <li><b>I follow you on Instagram.</b><br><span style="color: #555;">-Te sigo en Instagram.</span></li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "Forbid",
-    es: "Prohibir",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para prohibir formalmente que se haga algo.</p>
-            <ul style="padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;"><b>I forbid you to go.</b><br><span style="color: #555;">-Te prohíbo ir.</span></li>
-                <li><b>Rules forbid smoking here.</b><br><span style="color: #555;">-Las reglas prohíben fumar aquí.</span></li>
-            </ul>
-        </div>
-    `
-},
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I can't find my keys.</b><br><span style="color: #555;">-No encuentro
 {en: "A", es: "Un / Una (Antes De Sonido Consonante)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "An", es: "Un / Una (Antes De Sonido Vocal)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "The", es: "El / La / Los / Las", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
@@ -1618,16 +1452,15 @@ window.playAudio = function(text) {
 
 function agregarAudioEjemplos(html) {
     return html.replace(
-        /<b>(.*?)<\/b>/g,
+        /•?\s*<b>(.*?)<\/b>/g,
         (match, texto) =>
-            `<b>${texto}</b>
-            <span 
+            `<span 
                 onclick="event.stopPropagation(); playAudio('${texto.replace(/'/g,"\\'")}')"
-                style="margin-left:6px; cursor:pointer; display:inline-flex; vertical-align:middle;">
+                style="margin-right:8px; cursor:pointer; display:inline-flex; vertical-align:middle;">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="#808080">
                     <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
                 </svg>
-            </span>`
+            </span><b>${texto}</b>`
     );
 }
 
