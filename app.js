@@ -2701,8 +2701,12 @@ window.flip = function() {
         estadoFlashcard = 1;
     }
     else if(estadoFlashcard === 1){
-        t.innerHTML = agregarAudioEjemplos(actual.ejemplo || "Sin ejemplo");
-        icono.style.display = "none"; // ocultar solo en ejemplos
+        // Usamos una pequeña pausa para asegurar que el DOM esté listo
+        // y aplicamos la función de audio procesada
+        let contenidoEjemplo = actual.ejemplo || "Sin ejemplo";
+        t.innerHTML = agregarAudioEjemplos(contenidoEjemplo);
+        
+        icono.style.display = "none"; // Ocultar el icono principal
         estadoFlashcard = 2;
     }
     else{
