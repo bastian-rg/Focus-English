@@ -2688,7 +2688,7 @@ window.practicarPalabra = function(palabraIngles) {
 };
 
 let estadoFlashcard = 0;
-
+window.speechSynthesis.cancel(); // Detiene cualquier audio anterior al girar
 window.flip = function() {
     if(modo !== 1) return;
 
