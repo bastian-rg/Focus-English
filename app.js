@@ -2695,15 +2695,22 @@ window.flip = function() {
 
     let t = document.getElementById('texto-palabra');
     let icono = document.getElementById('icono-sonido');
+    let container = document.getElementById('pantalla');
+
+    // Forzar el repintado
+    container.style.display = 'none';
+    container.offsetHeight; 
+    container.style.display = '';
 
     if(estadoFlashcard === 0){
         t.innerText = actual.es;
-        icono.style.visibility = "visible"; // Cambiado a visibility
+        icono.style.visibility = "visible"; 
         estadoFlashcard = 1;
     }
     else if(estadoFlashcard === 1){
         t.innerHTML = agregarAudioEjemplos(actual.ejemplo || "Sin ejemplo");
-        icono.style.visibility = "hidden"; // Ocultar, pero mantener el espacio
+        // Aseguramos que la visibilidad cambie pero el layout no colapse
+        icono.style.visibility = "hidden"; 
         estadoFlashcard = 2;
     }
     else{
@@ -2712,7 +2719,6 @@ window.flip = function() {
         estadoFlashcard = 0;
     }
 };
-
 let velocidadLenta = true;
 window.playAudio = function(text) {
     speechSynthesis.cancel();
