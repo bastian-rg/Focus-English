@@ -276,14 +276,14 @@ td { padding: 10px; border-bottom: 1px solid #eee; font-size: 15px; }
     }
   }
 }
+/* Efecto de hundido al presionar (sin cambios de color ni transparencia) */
 .btn-opcion:active, 
 .btn-menu:active, 
 .btn-ajuste:active, 
 .btn-next:active, 
 .btn-volver:active {
-    transform: scale(0.96) !important; 
-    /* Aumentamos de 0.1s a 0.2s para que el ojo humano alcance a ver el hundimiento en la pantalla táctil */
-    transition: transform 0.2s ease !important; 
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3) !important;
-    opacity: 0.8 !important;
+    transform: scale(0.98) !important; 
+    transition: transform 0.1s ease !important;
+    /* Usamos una sombra más oscura pero sin modificar la opacidad del elemento */
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.4) !important; 
 }
