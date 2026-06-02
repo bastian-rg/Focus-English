@@ -277,7 +277,7 @@ td { padding: 10px; border-bottom: 1px solid #eee; font-size: 15px; }
   }
 }
 /* Efecto de hundido al presionar (sin cambios de color ni transparencia) */
-.btn-opcion:active, 
+
 .btn-menu:active, 
 .btn-ajuste:active, 
 .btn-next:active, 
