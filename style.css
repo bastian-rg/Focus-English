@@ -63,6 +63,11 @@ html, body {
   left: 15px; 
   font-size: 24px; 
 }
+#icono-sonido {
+    display: inline-block;
+    visibility: visible;
+    transition: visibility 0s;
+}
 
 #texto-palabra { 
   font-size: 32px; 
