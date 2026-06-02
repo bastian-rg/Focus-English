@@ -2,149 +2,7 @@
 let masterDict = [
     // ⚠️ PEGA AQUÍ ADENTRO TUS 1000 PALABRAS EXACTAMENTE COMO LAS TIENES
 
-{
-    en: "Feel",
-    es: "Sentir / Sentirse",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar sentimientos, emociones o estados físicos.</p>
-            <ul style="padding-left: 0px; list-style-type: none;">
-                <li style="margin-bottom: 8px;"><b>I feel happy today.</b><br><span style="color: #555;">-Me siento feliz hoy.</span></li>
-                <li><b>Do you feel cold?</b><br><span style="color: #555;">-¿Tienes frío?</span></li>
-            </ul>
-            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Aclaración: No confundir su pronunciación con Fill. Feel suena con una "i" larga (fíil).</p>
-        </div>
-    `
-},
-{
-    en: "Fight",
-    es: "Pelear / Luchar",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para hablar de pelear, discutir o luchar por algo.</p>
-            <ul style="padding-left: 0px; list-style-type: none;">
-                <li style="margin-bottom: 8px;"><b>They fight a lot.</b><br><span style="color: #555;">-Ellos pelean mucho.</span></li>
-                <li><b>Fight for your dreams.</b><br><span style="color: #555;">-Lucha por tus sueños.</span></li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "Fill",
-    es: "Llenar / Completar",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar que se está llenando o completando algo.</p>
-            <ul style="padding-left: 0px; list-style-type: none;">
-                <li style="margin-bottom: 8px;"><b>Fill the glass with water.</b><br><span style="color: #555;">-Llena el vaso con agua.</span></li>
-                <li><b>Fill out this form.</b><br><span style="color: #555;">-Llena este formulario.</span></li>
-            </ul>
-            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Aclaración: No confundir con Feel. Fill suena con una "i" corta y seca (fil).</p>
-        </div>
-    `
-},
-{
-    en: "Find",
-    es: "Encontrar / Localizar",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando localizas algo que estabas buscando o descubres algo.</p>
-            <ul style="padding-left: 0px; list-style-type: none;">
-                <li style="margin-bottom: 8px;"><b>I can't find my keys.</b><br><span style="color: #555;">-No encuentro mis llaves.</span></li>
-                <li><b>Did you find a job?</b><br><span style="color: #555;">-¿Encontraste un trabajo?.</span></li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "Finish",
-    es: "Terminar / Acabar",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar que se ha terminado una tarea, acción o evento.</p>
-            <ul style="padding-left: 0px; list-style-type: none;">
-                <li style="margin-bottom: 8px;"><b>I need to finish my homework.</b><br><span style="color: #555;">-Necesito terminar mi tarea.</span></li>
-                <li><b>What time does the movie finish?</b><br><span style="color: #555;">-¿A qué hora termina la película?.</span></li>
-            </ul>
-            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Aclaración: A diferencia de End (que habla del límite o final de algo), Finish se enfoca en completar una acción.</p>
-        </div>
-    `
-},
-{
-    en: "Fix",
-    es: "Reparar / Solucionar",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa principalmente para reparar algo roto o solucionar un problema.</p>
-            <ul style="padding-left: 0px; list-style-type: none;">
-                <li style="margin-bottom: 8px;"><b>Can you fix my phone?</b><br><span style="color: #555;">-¿Puedes reparar mi teléfono?.</span></li>
-                <li><b>Let's fix this problem.</b><br><span style="color: #555;">-Vamos a solucionar este problema.</span></li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "Fly",
-    es: "Volar / Mosca",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción de volar. También significa "mosca" como sustantivo.</p>
-            <ul style="padding-left: 0px; list-style-type: none;">
-                <li style="margin-bottom: 8px;"><b>Birds can fly high.</b><br><span style="color: #555;">-Los pájaros pueden volar alto.</span></li>
-                <li><b>There is a fly in my room.</b><br><span style="color: #555;">-Hay una mosca en mi habitación.</span></li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "Fold",
-    es: "Doblar",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción de doblar materiales flexibles como ropa o papel.</p>
-            <ul style="padding-left: 0px; list-style-type: none;">
-                <li style="margin-bottom: 8px;"><b>Please, fold your clothes.</b><br><span style="color: #555;">-Por favor, dobla tu ropa.</span></li>
-                <li><b>Fold the paper in half.</b><br><span style="color: #555;">-Dobla el papel por la mitad.</span></li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "Follow",
-    es: "Seguir",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para ir detrás de alguien, continuar un camino o seguir a alguien en redes.</p>
-            <ul style="padding-left: 0px; list-style-type: none;">
-                <li style="margin-bottom: 8px;"><b>Follow me, please.</b><br><span style="color: #555;">-Sígueme, por favor.</span></li>
-                <li><b>I follow you on Instagram.</b><br><span style="color: #555;">-Te sigo en Instagram.</span></li>
-            </ul>
-        </div>
-    `
-},
-{
-    en: "Forbid",
-    es: "Prohibir",
-    categoria: "prueba",
-    ejemplo: `
-        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
-            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para prohibir formalmente que se haga algo.</p>
-            <ul style="padding-left: 0px; list-style-type: none;">
-                <li style="margin-bottom: 8px;"><b>I forbid you to go.</b><br><span style="color: #555;">-Te prohíbo ir.</span></li>
-                <li><b>Rules forbid smoking here.</b><br><span style="color: #555;">-Las reglas prohíben fumar aquí.</span></li>
-            </ul>
-        </div>
-    `
-},
+
 {en: "A", es: "Un / Una (Antes De Sonido Consonante)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "An", es: "Un / Una (Antes De Sonido Vocal)", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "The", es: "El / La / Los / Las", categoria: "Palabras Funcionales", racha: 0, pesoExtra: 0, fallos: 0},
@@ -372,108 +230,1439 @@ let masterDict = [
 
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-{en: "Feel", es: "Sentir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Fight", es: "Pelear / Luchar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Fill", es: "Llenar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Find", es: "Encontrar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Finish", es: "Terminar / Finalizar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Fix", es: "Arreglar / Reparar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Fly", es: "Volar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Fold", es: "Doblar (Ropa, Papel)", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Follow", es: "Seguir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Forbid", es: "Prohibir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Forget", es: "Olvidar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Forgive", es: "Perdonar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Freeze", es: "Congelar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Fry", es: "Freír", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Gather", es: "Reunir / Juntar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Get", es: "Obtener / Conseguir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Give", es: "Dar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Go", es: "Ir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Grow", es: "Crecer / Cultivar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Guess", es: "Adivinar / Suponer", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Guide", es: "Guiar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Hang", es: "Colgar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Happen", es: "Ocurrir / Suceder", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Hate", es: "Odiar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Hear", es: "Oír", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Help", es: "Ayudar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Hide", es: "Esconder / Ocultar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Hit", es: "Golpear / Pegar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Hold", es: "Sostener / Aguantar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Hope", es: "Esperar (Tener Esperanza)", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Hug", es: "Abrazar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Hunt", es: "Cazar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Hurry", es: "Apresurarse", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Hurt", es: "Lastimar / Doler", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Imagine", es: "Imaginar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Improve", es: "Mejorar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Include", es: "Incluir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Increase", es: "Aumentar / Incrementar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Inform", es: "Informar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Introduce", es: "Presentar (A Alguien)", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Invent", es: "Inventar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Invite", es: "Invitar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Join", es: "Unirse / Acompañar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Joke", es: "Bromear", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Jump", es: "Saltar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Keep", es: "Mantener / Guardar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Kick", es: "Patear", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Kill", es: "Matar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Kiss", es: "Besar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Knock", es: "Tocar (La Puerta) / Golpear", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Know", es: "Saber / Conocer", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Laugh", es: "Reír", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Lay", es: "Colocar / Poner", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Lead", es: "Liderar / Guiar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Learn", es: "Aprender", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Leave", es: "Dejar / Salir / Irse", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Lend", es: "Prestar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Let", es: "Permitir / Dejar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Lie", es: "Mentir / Recostarse", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Lift", es: "Levantar / Elevar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Like", es: "Gustar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Listen", es: "Escuchar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Live", es: "Vivir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Load", es: "Cargar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Lock", es: "Cerrar Con Llave", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Look", es: "Mirar / Parecer", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Lose", es: "Perder", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Love", es: "Amar / Encantar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Make", es: "Hacer / Fabricar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Manage", es: "Gestionar / Administrar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Mark", es: "Marcar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Marry", es: "Casarse", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Match", es: "Emparejar / Combinar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Matter", es: "Importar (Relevancia)", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Mean", es: "Significar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Measure", es: "Medir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Meet", es: "Conocer / Reunirse", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Melt", es: "Derretir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Mention", es: "Mencionar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Mix", es: "Mezclar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Move", es: "Mover / Mudarse", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Multiply", es: "Multiplicar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Name", es: "Nombrar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Notice", es: "Notar / Darse Cuenta", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Offer", es: "Ofrecer", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Open", es: "Abrir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Order", es: "Ordenar / Pedir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Organize", es: "Organizar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Pack", es: "Empacar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Paint", es: "Pintar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Pass", es: "Pasar / Aprobar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Pay", es: "Pagar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Perform", es: "Interpretar / Ejecutar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Pick", es: "Recoger / Elegir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Plan", es: "Planear", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Play", es: "Jugar / Tocar (Instrumento)", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Point", es: "Señalar / Apuntar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Pour", es: "Verter", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Practice", es: "Practicar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
-{en: "Praise", es: "Elogiar / Alabar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
+{
+    en: "Feel",
+    es: "Sentir / Sentirse",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar sentimientos, emociones o estados físicos.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I feel happy today.</b><br><span style="color: #555;">-Me siento feliz hoy.</span></li>
+                <li><b>Do you feel cold?</b><br><span style="color: #555;">-¿Tienes frío?</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Aclaración: No confundir su pronunciación con Fill. Feel suena con una "i" larga (fíil).</p>
+        </div>
+    `
+},
+{
+    en: "Fight",
+    es: "Pelear / Luchar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para hablar de pelear, discutir o luchar por algo.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>They fight a lot.</b><br><span style="color: #555;">-Ellos pelean mucho.</span></li>
+                <li><b>Fight for your dreams.</b><br><span style="color: #555;">-Lucha por tus sueños.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Fill",
+    es: "Llenar / Completar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar que se está llenando o completando algo.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Fill the glass with water.</b><br><span style="color: #555;">-Llena el vaso con agua.</span></li>
+                <li><b>Fill out this form.</b><br><span style="color: #555;">-Llena este formulario.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Aclaración: No confundir con Feel. Fill suena con una "i" corta y seca (fil).</p>
+        </div>
+    `
+},
+{
+    en: "Find",
+    es: "Encontrar / Localizar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando localizas algo que estabas buscando o descubres algo.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I can't find my keys.</b><br><span style="color: #555;">-No encuentro mis llaves.</span></li>
+                <li><b>Did you find a job?</b><br><span style="color: #555;">-¿Encontraste un trabajo?.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Finish",
+    es: "Terminar / Acabar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar que se ha terminado una tarea, acción o evento.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I need to finish my homework.</b><br><span style="color: #555;">-Necesito terminar mi tarea.</span></li>
+                <li><b>What time does the movie finish?</b><br><span style="color: #555;">-¿A qué hora termina la película?.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Aclaración: A diferencia de End (que habla del límite o final de algo), Finish se enfoca en completar una acción.</p>
+        </div>
+    `
+},
+{
+    en: "Fix",
+    es: "Reparar / Solucionar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa principalmente para reparar algo roto o solucionar un problema.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Can you fix my phone?</b><br><span style="color: #555;">-¿Puedes reparar mi teléfono?.</span></li>
+                <li><b>Let's fix this problem.</b><br><span style="color: #555;">-Vamos a solucionar este problema.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Fly",
+    es: "Volar / Mosca",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción de volar. También significa "mosca" como sustantivo.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Birds can fly high.</b><br><span style="color: #555;">-Los pájaros pueden volar alto.</span></li>
+                <li><b>There is a fly in my room.</b><br><span style="color: #555;">-Hay una mosca en mi habitación.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Fold",
+    es: "Doblar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción de doblar materiales flexibles como ropa o papel.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Please, fold your clothes.</b><br><span style="color: #555;">-Por favor, dobla tu ropa.</span></li>
+                <li><b>Fold the paper in half.</b><br><span style="color: #555;">-Dobla el papel por la mitad.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Follow",
+    es: "Seguir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para ir detrás de alguien, continuar un camino o seguir a alguien en redes.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Follow me, please.</b><br><span style="color: #555;">-Sígueme, por favor.</span></li>
+                <li><b>I follow you on Instagram.</b><br><span style="color: #555;">-Te sigo en Instagram.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Forbid",
+    es: "Prohibir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para prohibir formalmente que se haga algo.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I forbid you to go.</b><br><span style="color: #555;">-Te prohíbo ir.</span></li>
+                <li><b>Rules forbid smoking here.</b><br><span style="color: #555;">-Las reglas prohíben fumar aquí.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Forget",
+    es: "Olvidar / Olvidarse",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando no recuerdas una información, un evento o una acción.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Don't forget to lock the door.</b><br><span style="color: #555;">-No olvides cerrar la puerta con llave.</span></li>
+                <li><b>I always forget his name.</b><br><span style="color: #555;">-Siempre olvido su nombre.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Forgot /fərgɒt/. Participio: Forgotten /fərgɒtn/.</p>
+        </div>
+    `
+},
+{
+    en: "Forgive",
+    es: "Perdonar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para dejar de sentir enfado o resentimiento hacia alguien por una falta.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Please, forgive me.</b><br><span style="color: #555;">-Por favor, perdóname.</span></li>
+                <li><b>It's hard to forgive a betrayal.</b><br><span style="color: #555;">-Es difícil perdonar una traición.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Forgave /fərgéɪv/. Participio: Forgiven /fərgívn/.</p>
+        </div>
+    `
+},
+{
+    en: "Freeze",
+    es: "Congelar / Congelarse",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando un líquido se transforma en sólido por el frío, o para expresar frío extremo.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Water freezes at 0°C.</b><br><span style="color: #555;">-El agua se congela a los 0°C.</span></li>
+                <li><b>I'm freezing out here!</b><br><span style="color: #555;">-¡Me estoy congelando aquí afuera!</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Fry",
+    es: "Freír",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa en la cocina para indicar la acción de cocinar un alimento con aceite o grasa caliente.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Fry the onions until golden.</b><br><span style="color: #555;">-Fríe las cebollas hasta que estén doradas.</span></li>
+                <li><b>I like to fry potatoes.</b><br><span style="color: #555;">-Me gusta freír patatas.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Gather",
+    es: "Reunir / Recolectar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para juntar personas en un grupo, o recolectar cosas dispersas.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>We gathered in the main hall.</b><br><span style="color: #555;">-Nos reunimos en el vestíbulo principal.</span></li>
+                <li><b>They gather data for the project.</b><br><span style="color: #555;">-Ellos recolectan datos para el proyecto.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Get",
+    es: "Conseguir / Obtener / Llegar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Es uno de los verbos más comunes; se usa para obtener cosas, cambiar de estado o llegar a un sitio.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Did you get my email?</b><br><span style="color: #555;">-¿Recibiste mi correo electrónico?</span></li>
+                <li><b>Call me when you get home.</b><br><span style="color: #555;">-Llámame cuando llegues a casa.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Got /gɒt/. Participio: Gotten (US) / Got (UK).</p>
+        </div>
+    `
+},
+{
+    en: "Give",
+    es: "Dar / Entregar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para transferir la posesión de algo de forma voluntaria a otra persona.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Give me your hand.</b><br><span style="color: #555;">-Dame tu mano.</span></li>
+                <li><b>She gave him a present.</b><br><span style="color: #555;">-She gave him a present.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Gave /géɪv/. Participio: Given /gívn/.</p>
+        </div>
+    `
+},
+{
+    en: "Go",
+    es: "Ir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar el movimiento de un lugar a otro.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I have to go to work now.</b><br><span style="color: #555;">-Tengo que ir a trabajar ahora.</span></li>
+                <li><b>Where are you going?</b><br><span style="color: #555;">-¿A dónde vas?</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Went /wɛnt/. Participio: Gone /gɒn/.</p>
+        </div>
+    `
+},
+{
+    en: "Grow",
+    es: "Crecer / Cultivar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para el desarrollo de seres vivos (personas, plantas) o el aumento de tamaño de algo.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Children grow very fast.</b><br><span style="color: #555;">-Los niños crecen muy rápido.</span></li>
+                <li><b>They grow tomatoes in the garden.</b><br><span style="color: #555;">-Ellos cultivan tomates en el jardín.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Grew /grú/. Participio: Grown /gróun/.</p>
+        </div>
+    `
+},
+{
+    en: "Guess",
+    es: "Adivinar / Suponer",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para intentar acertar una respuesta sin estar seguro, o para indicar una suposición.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Guess what happened today!</b><br><span style="color: #555;">-¡Adivina qué pasó hoy!</span></li>
+                <li><b>I guess you are right.</b><br><span style="color: #555;">-Supongo que tienes razón.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Guide",
+    es: "Guiar / Dirigir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para mostrar el camino a alguien o dirigir el desarrollo de una actividad.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>She will guide you through the city.</b><br><span style="color: #555;">-Ella te guiará a través de la ciudad.</span></li>
+                <li><b>Let experience guide your decision.</b><br><span style="color: #555;">-Deja que la experiencia guíe tu decisión.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Hang",
+    es: "Colgar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para sujetar algo en lo alto sin que toque el suelo, como la ropa o un cuadro.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Hang your coat on the hook.</b><br><span style="color: #555;">-Cuelga tu abrigo en el gancho.</span></li>
+                <li><b>They hang the paintings in the gallery.</b><br><span style="color: #555;">-Ellos cuelgan las pinturas en la galería.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Hung /hʌŋ/ (para objetos). Nota: Su uso común con "out" (hang out) significa pasar el rato.</p>
+        </div>
+    `
+},
+{
+    en: "Happen",
+    es: "Pasar / Suceder / Ocurrir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para referirse a eventos o situaciones que toman lugar o se desarrollan de forma planificada o imprevista.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>What happened last night?</b><br><span style="color: #555;">-¿Qué pasó anoche?</span></li>
+                <li><b>Accidents can happen anywhere.</b><br><span style="color: #555;">-Los accidentes pueden suceder en cualquier lugar.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Hate",
+    es: "Odiar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar una profunda aversión, disgusto o antipatía hacia algo o alguien.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I hate waiting in long lines.</b><br><span style="color: #555;">-Odio esperar en filas largas.</span></li>
+                <li><b>She hates cold weather.</b><br><span style="color: #555;">-Ella odia el clima frío.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Hear",
+    es: "Oír / Escuchar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa principalmente para percibir sonidos a través del oído.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Did you hear that noise?</b><br><span style="color: #555;">-¿Oíste ese ruido?</span></li>
+                <li><b>I can't hear you clearly.</b><br><span style="color: #555;">-No puedo oírte claramente.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Heard /hɜːrd/. No confundir semánticamente con "Listen" (que implica prestar atención activa).</p>
+        </div>
+    `
+},
+{
+    en: "Help",
+    es: "Ayudar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para colaborar con alguien haciendo parte de su trabajo o facilitándole una tarea.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Can you help me with this box?</b><br><span style="color: #555;">-¿Puedes ayudarme con esta caja?</span></li>
+                <li><b>She loves to help other people.</b><br><span style="color: #555;">-A ella le encanta ayudar a otras personas.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Hide",
+    es: "Esconder / Ocultar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para poner algo o a alguien en un lugar donde no se pueda encontrar o ver fácilmente.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Where did you hide the keys?</b><br><span style="color: #555;">-¿Dónde escondiste las llaves?</span></li>
+                <li><b>Don't hide your feelings.</b><br><span style="color: #555;">-No ocultes tus sentimientos.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Hid /hɪd/. Participio: Hidden /hídn/.</p>
+        </div>
+    `
+},
+{
+    en: "Hit",
+    es: "Golpear / Pegar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando se impacta algo de manera física y con fuerza, ya sea de forma intencional o accidental.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>He hit the ball with the bat.</b><br><span style="color: #555;">-Él golpeó la bola con el bate.</span></li>
+                <li><b>The car hit the wall.</b><br><span style="color: #555;">-El auto chocó contra la pared.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado invariable: Hit /hɪt/. Se escribe igual en presente, pasado y participio.</p>
+        </div>
+    `
+},
+{
+    en: "Hold",
+    es: "Sostener / Agarrar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para mantener algo agarrado con las manos o los brazos, o para soportar un peso.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Hold my bag for a moment, please.</b><br><span style="color: #555;">-Sostén mi bolso un momento, por favor.</span></li>
+                <li><b>They hold hands while walking.</b><br><span style="color: #555;">-Ellos se toman de las manos mientras caminan.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Held /hɛld/.</p>
+        </div>
+    `
+},
+{
+    en: "Hope",
+    es: "Esperar / Tener esperanza",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para desear que algo bueno ocurra en el futuro y creer que es posible.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I hope to see you soon.</b><br><span style="color: #555;">-Espero verte pronto.</span></li>
+                <li><b>We hope everything goes well.</b><br><span style="color: #555;">-Esperamos que todo salga bien.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">No confundir semánticamente con "Wait" (esperar físicamente que pase el tiempo) o "Expect" (esperar que algo pase porque es probable).</p>
+        </div>
+    `
+},
+{
+    en: "Hug",
+    es: "Abrazar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar la acción de rodear a alguien con los brazos como muestra de afecto.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>She hugged her mother tightly.</b><br><span style="color: #555;">-Ella abrazó a su madre fuertemente.</span></li>
+                <li><b>I love to hug my friends.</b><br><span style="color: #555;">-Me encanta abrazar a mi amigos.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Hunt",
+    es: "Cazar / Buscar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción de perseguir animales para capturarlos o para buscar intensamente algo (como un trabajo o apartamento).</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Lions hunt in groups.</b><br><span style="color: #555;">-Los leones cazan en grupos.</span></li>
+                <li><b>I'm hunting for a new apartment.</b><br><span style="color: #555;">-Estoy buscando un apartamento nuevo.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Hurry",
+    es: "Apurarse / Dar prisa",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar que se debe hacer una acción con rapidez porque el tiempo es limitado.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Hurry up, or we will miss the train!</b><br><span style="color: #555;">-¡Apúrate, o perderemos el tren!</span></li>
+                <li><b>You don't need to hurry, we have time.</b><br><span style="color: #555;">-No necesitas darte prisa, tenemos tiempo.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Hurt",
+    es: "Doler / Lastimar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar dolor físico o emocional, o la acción de causar daño a alguien.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>My head hurts a lot today.</b><br><span style="color: #555;">-Me duele mucho la cabeza hoy.</span></li>
+                <li><b>I didn't mean to hurt your feelings.</b><br><span style="color: #555;">-No fue mi intención lastimar tus sentimientos.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado invariable: Hurt /hɜːrt/. Se escribe y pronuncia igual en presente, pasado y participio.</p>
+        </div>
+    `
+},
+{
+    en: "Imagine",
+    es: "Imaginar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para representar mentalmente cosas, personas o situaciones que no están presentes o que no son reales.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Imagine living on a tropical island.</b><br><span style="color: #555;">-Imagina vivir en una isla tropical.</span></li>
+                <li><b>I can't imagine my life without music.</b><br><span style="color: #555;">-No puedo imaginar mi vida sin música.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Improve",
+    es: "Mejorar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar que algo pasa a tener un estado, calidad o rendimiento superior al que tenía.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I practice every day to improve my English.</b><br><span style="color: #555;">-Practico todos los días para mejorar mi inglés.</span></li>
+                <li><b>The weather is starting to improve.</b><br><span style="color: #555;">-El clima está empezando a mejorar.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Include",
+    es: "Incluir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando una cosa contiene a otra como parte de un todo, o para meter a alguien en un grupo o actividad.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Does the price include breakfast?</b><br><span style="color: #555;">-¿El precio incluye el desayuno?</span></li>
+                <li><b>Please include your phone number in the form.</b><br><span style="color: #555;">-Por favor incluye tu número de teléfono en el formulario.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Increase",
+    es: "Aumentar / Incrementar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando algo se hace mayor en cantidad, tamaño, precio, intensidad o grado.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>The company wants to increase sales.</b><br><span style="color: #555;">-La empresa quiere aumentar las ventas.</span></li>
+                <li><b>Temperatures increase during the summer.</b><br><span style="color: #555;">-Las temperaturas aumentan durante el verano.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Inform",
+    es: "Informar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para comunicar datos, noticias o un hecho concreto a alguien de manera formal.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Please inform us of any changes.</b><br><span style="color: #555;">-Por favor infórmenos de cualquier cambio.</span></li>
+                <li><b>He informed the police about the accident.</b><br><span style="color: #555;">-Él informó a la policía sobre el accidente.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Introduce",
+    es: "Presentar (a alguien) / Introducir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa principalmente para dar a conocer a una persona con otra, o para incorporar un nuevo concepto o producto.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Let me introduce you to my brother.</b><br><span style="color: #555;">-Permíteme presentarte a mi hermano.</span></li>
+                <li><b>They introduced a new system at work.</b><br><span style="color: #555;">-Ellos introdujeron un sistema nuevo en el trabajo.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Invent",
+    es: "Inventar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar la acción de crear, diseñar o producir algo nuevo que no existía antes.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Thomas Edison invented the lightbulb.</b><br><span style="color: #555;">-Thomas Edison inventó la bombilla.</span></li>
+                <li><b>Children love to invent stories.</b><br><span style="color: #555;">-A los niños les encanta inventar historias.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Invite",
+    es: "Invitar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para solicitar cordialmente la presencia de alguien en un evento, reunión o lugar.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>They invited us to their wedding.</b><br><span style="color: #555;">-Ellos nos invitaron a su boda.</span></li>
+                <li><b>Who did you invite to the party?</b><br><span style="color: #555;">-¿A quién invitaste a la fiesta?</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Join",
+    es: "Unirse / Juntar / Conectar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para formar parte de un grupo, club o actividad, o para conectar físicamente dos cosas.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Would you like to join our team?</b><br><span style="color: #555;">-¿Te gustaría unirte a nuestro equipo?</span></li>
+                <li><b>Join the two cables together.</b><br><span style="color: #555;">-Junta los dos cables.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Joke",
+    es: "Bromear",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando alguien dice o hace algo con la intención de divertir o hacer reír, sin ser serio.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Don't take it seriously, I'm just joking.</b><br><span style="color: #555;">-No te lo tomes en serio, solo estoy bromeando.</span></li>
+                <li><b>They always joke about the weather.</b><br><span style="color: #555;">-Ellos siempre bromean sobre el clima.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Jump",
+    es: "Saltar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción de impulsarse hacia arriba o hacia adelante despegando los pies del suelo.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>The cat can jump onto the table.</b><br><span style="color: #555;">-El gato puede saltar sobre la mesa.</span></li>
+                <li><b>He jumped with joy when he heard the news.</b><br><span style="color: #555;">-Él saltó de alegría cuando escuchó la noticia.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Keep",
+    es: "Mantener / Guardar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para continuar teniendo algo en tu posesión, o para mantener un estado o condición constante.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>You can keep the change.</b><br><span style="color: #555;">-Puedes quedarte con el cambio.</span></li>
+                <li><b>Please keep the door closed.</b><br><span style="color: #555;">-Por favor mantén la puerta cerrada.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Kept /kɛpt/.</p>
+        </div>
+    `
+},
+{
+    en: "Kick",
+    es: "Patear / Dar una patada",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para golpear algo de manera deliberada o accidental utilizando el pie.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Kick the ball as hard as you can.</b><br><span style="color: #555;">-Patea la bola tan fuerte como puedas.</span></li>
+                <li><b>He accidentally kicked the table leg.</b><br><span style="color: #555;">-Él pateó accidentalmente la pata de la mesa.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Kill",
+    es: "Matar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar la acción de causar la muerte de un ser vivo, o figuradamente cuando algo causa mucho dolor/cansancio.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Smoking can kill you.</b><br><span style="color: #555;">-Fumar puede matarte.</span></li>
+                <li><b>My feet are killing me after that walk.</b><br><span style="color: #555;">-Mis pies me están matando después de esa caminata.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Kiss",
+    es: "Besar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción de tocar a alguien o algo con los labios como muestra de amor, saludo o afecto.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>She kissed her son on the cheek.</b><br><span style="color: #555;">-Ella besó a su hijo en la mejilla.</span></li>
+                <li><b>They kissed goodbye at the station.</b><br><span style="color: #555;">-Ellos se besaron de despedida en la estación.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Knock",
+    es: "Tocar (la puerta) / Golpear",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa principalmente para dar golpes en una puerta para llamar la atención, o para derribar algo (knock down).</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Always knock before entering.</b><br><span style="color: #555;">-Siempre toca la puerta antes de entrar.</span></li>
+                <li><b>The wind knocked down the tree.</b><br><span style="color: #555;">-El viento derribó el árbol.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Aclaración: La 'K' inicial es muda; se pronuncia /nɒk/.</p>
+        </div>
+    `
+},
+{
+    en: "Know",
+    es: "Saber / Conocer",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para tener información en la mente o estar familiarizado con una persona, lugar o cosa.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I know the answer to this question.</b><br><span style="color: #555;">-Sé la respuesta a esta pregunta.</span></li>
+                <li><b>Do you know a good restaurant near here?</b><br><span style="color: #555;">-¿Conoces un buen restaurante cerca de aquí?</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Aclaración: La 'K' inicial es muda; se pronuncia /noʊ/. Pasado irregular: Knew /nuː/. Participio: Known /noʊn/.</p>
+        </div>
+    `
+},
+{
+    en: "Laugh",
+    es: "Reír / Reírse",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar la reacción física y sonora ante algo gracioso o divertido.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>The joke made everyone laugh.</b><br><span style="color: #555;">-El chiste hizo reír a todos.</span></li>
+                <li><b>Don't laugh at his mistakes.</b><br><span style="color: #555;">-No te rias de sus errores.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Aclaración: La combinación 'gh' se pronuncia como una 'F'; suena /læf/ o /lɑːf/.</p>
+        </div>
+    `
+},
+{
+    en: "Lay",
+    es: "Colocar / Poner / Recostar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para poner algo plano sobre una superficie con cuidado. Su uso más común es "lay the table" (poner la mesa).</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Please, lay the book on the desk.</b><br><span style="color: #555;">-Por favor, coloca el libro en el escritorio.</span></li>
+                <li><b>Can you help me lay the table?</b><br><span style="color: #555;">-¿Puedes ayudarme a poner la mesa?</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Laid /leɪd/. A menudo se confunde con "Lie", pero "Lay" requiere obligatoriamente un objeto directo.</p>
+        </div>
+    `
+},
+{
+    en: "Lead",
+    es: "Guiar / Liderar / Conducir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para ir al frente mostrando el camino, o para dirigir a un grupo de personas o una organización.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>She will lead the project next month.</b><br><span style="color: #555;">-Ella liderará el proyecto el próximo mes.</span></li>
+                <li><b>This path leads to the beach.</b><br><span style="color: #555;">-Este camino conduce a la playa.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Led /lɛd/.</p>
+        </div>
+    `
+},
+{
+    en: "Learn",
+    es: "Aprender",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para adquirir conocimientos, habilidades o destrezas a través del estudio o la experiencia.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I want to learn how to drive.</b><br><span style="color: #555;">-Quiero aprender a conducir.</span></li>
+                <li><b>We learn from our mistakes.</b><br><span style="color: #555;">-Aprendemos de nuestros errores.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Leave",
+    es: "Salir / Dejar / Irse",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para marcharse de un lugar, o para olvidar/colocar algo intencionadamente en un sitio.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>What time do you leave the office?</b><br><span style="color: #555;">-¿A qué hora sales de la oficina?</span></li>
+                <li><b>Don't leave your keys in the car.</b><br><span style="color: #555;">-No dejes tus llaves en el auto.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Left /lɛft/.</p>
+        </div>
+    `
+},
+{
+    en: "Lend",
+    es: "Prestar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando entregas algo tuyo a alguien con la condición de que te lo devuelva en el futuro.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Can you lend me a pen, please?</b><br><span style="color: #555;">-¿Puedes prestarme un bolígrafo, por favor?</span></li>
+                <li><b>I never lend my books to anyone.</b><br><span style="color: #555;">-Nunca le presto mi libros a nadie.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Lent /lɛnt/. Recuerda: Lend es dar prestado, mientras que "Borrow" es pedir prestado.</p>
+        </div>
+    `
+},
+{
+    en: "Let",
+    es: "Permitir / Dejar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para dar permiso o permitir que una acción suceda sin poner obstáculos.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Let me know if you need help.</b><br><span style="color: #555;">-Déjame saber si necesitas ayuda.</span></li>
+                <li><b>Her parents didn't let her go out.</b><br><span style="color: #555;">-Sus padres no la dejaron salir.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado invariable: Let /lɛt/. Se mantiene igual en todos los tiempos.</p>
+        </div>
+    `
+},
+{
+    en: "Lie",
+    es: "Mentir / Recostarse",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Tiene dos significados comunes: decir algo falso intencionadamente, o colocar el cuerpo horizontalmente en una superficie (ej. cama).</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>He lied about his age.</b><br><span style="color: #555;">-Él mintió sobre su edad.</span></li>
+                <li><b>I love to lie on the beach.</b><br><span style="color: #555;">-Me encanta recostarme en la playa.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Ojo con el pasado: Si significa "mentir" es regular (Lied). Si significa "recostarse" es irregular: Pasado Lay /leɪ/, Participio Lain /leɪn/.</p>
+        </div>
+    `
+},
+{
+    en: "Lift",
+    es: "Levantar / Elevar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción física de mover algo pesado o ligero hacia una posición más alta.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>This box is too heavy to lift.</b><br><span style="color: #555;">-Esta caja es demasiado pesada para levantarla.</span></li>
+                <li><b>He lifts weights at the gym.</b><br><span style="color: #555;">-Él levanta pesas en el gimnasio.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Like",
+    es: "Gustar / Agradar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar que algo o alguien resulta agradable, atractivo o placentero.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I like this song a lot.</b><br><span style="color: #555;">-Me gusta mucho esta canción.</span></li>
+                <li><b>Do you like coffee?</b><br><span style="color: #555;">-¿Te gusta el café?</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Listen",
+    es: "Escuchar / Prestar atención",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar el esfuerzo voluntario y consciente de prestar atención a un sonido (suele ir acompañado de "to").</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Listen to me carefully.</b><br><span style="color: #555;">-Escúchame con atención.</span></li>
+                <li><b>I like to listen to music while working.</b><br><span style="color: #555;">-Me gusta escuchar música mientras trabajo.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Live",
+    es: "Vivir / Habitar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar el hecho de estar vivo o para referirse al lugar de residencia permanente.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>They live in a big house.</b><br><span style="color: #555;">-Ellos viven en una casa grande.</span></li>
+                <li><b>He wants to live a long life.</b><br><span style="color: #555;">-Él quiere vivir una vida larga.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Load",
+    es: "Cargar / Llenar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para poner peso o mercancía en un vehículo, o para meter datos/páginas en un sistema digital.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Help me load the boxes into the truck.</b><br><span style="color: #555;">-Ayúdame a cargar las cajas en el camión.</span></li>
+                <li><b>The webpage takes too long to load.</b><br><span style="color: #555;">-La página web tarda demasiado en cargar.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Lock",
+    es: "Cerrar con llave / Bloquear",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para asegurar una puerta, ventana o contenedor utilizando una llave o un mecanismo de seguridad.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Don't forget to lock the back door.</b><br><span style="color: #555;">-No olvides cerrar con llave la puerta trasera.</span></li>
+                <li><b>I locked my phone by accident.</b><br><span style="color: #555;">-Bloqueé mi teléfono por accidente.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Look",
+    es: "Mirar / Parecer",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para dirigir la vista hacia algo (usualmente con "at") o para describir la apariencia física de algo o alguien.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Look at that beautiful sunset.</b><br><span style="color: #555;">-Mira ese hermoso atardecer.</span></li>
+                <li><b>You look tired today.</b><br><span style="color: #555;">-Te ves / Pareces cansado hoy.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Lose",
+    es: "Perder",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando ya no se posee algo que se tenía, cuando se extravía un objeto o cuando no se gana un juego/competencia.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I always lose my keys.</b><br><span style="color: #555;">-Siempre pierdo mis llaves.</span></li>
+                <li><b>We can't afford to lose this match.</b><br><span style="color: #555;">-No podemos permitirnos perder este partido.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Lost /lɒst/.</p>
+        </div>
+    `
+},
+{
+    en: "Love",
+    es: "Amar / Encantar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar un afecto profundo hacia una persona o un gusto extremo por una actividad o cosa.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I love my family.</b><br><span style="color: #555;">-Amo a mi familia.</span></li>
+                <li><b>She loves reading novels.</b><br><span style="color: #555;">-Le encanta leer novelas.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Make",
+    es: "Hacer / Fabricar / Crear",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para acciones que implican construir, elaborar o producir algo físico o abstracto con las manos o la mente.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I need to make dinner now.</b><br><span style="color: #555;">-Necesito hacer la cena ahora.</span></li>
+                <li><b>She made a big mistake.</b><br><span style="color: #555;">-Ella cometió (hizo) un gran error.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Made /meɪd/. Recuerda: "Make" se enfoca en la creación o resultado final, a diferencia de "Do" que se enfoca en la actividad en sí.</p>
+        </div>
+    `
+},
+{
+    en: "Manage",
+    es: "Gestionar / Administrar / Lograr",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para dirigir un negocio o equipo, o para expresar que se logró hacer algo difícil (manage to).</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>He manages a small team at work.</b><br><span style="color: #555;">-Él gestiona un equipo pequeño en el trabajo.</span></li>
+                <li><b>How did you manage to finish so early?</b><br><span style="color: #555;">-¿Cómo lograste terminar tan temprano?</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Mark",
+    es: "Marcar / Corregir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para hacer una señal visible en una superficie, o en el ámbito educativo para evaluar o corregir exámenes.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Mark the correct answer with an X.</b><br><span style="color: #555;">-Marca la respuesta correcta con una X.</span></li>
+                <li><b>The teacher is marking the exams.</b><br><span style="color: #555;">-El profesor está corrigiendo los exámenes.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Marry",
+    es: "Casarse / Casar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar la unión legal o religiosa de dos personas en matrimonio.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>They decided to marry next summer.</b><br><span style="color: #555;">-Ellos decidieron casarse el próximo verano.</span></li>
+                <li><b>Will you marry me?</b><br><span style="color: #555;">-¿Te casarías conmigo?</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Match",
+    es: "Combinar / Emparejar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando dos cosas van bien juntas por color/diseño, o para conectar elementos que se corresponden mutuamente.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Your shoes don't match your belt.</b><br><span style="color: #555;">-Tus zapatos no combinan con tu cinturón.</span></li>
+                <li><b>Match the words with their definitions.</b><br><span style="color: #555;">-Empareja las palabras con sus definiciones.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Matter",
+    es: "Importar / Tener importancia",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar que algo es relevante, significativo o causa una diferencia.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Your opinion matters to us.</b><br><span style="color: #555;">-Tu opinión nos importa.</span></li>
+                <li><b>It doesn't matter anymore.</b><br><span style="color: #555;">-Eso ya no importa.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Mean",
+    es: "Significar / Querer decir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar el sentido de una palabra, o para expresar la verdadera intención detrás de un comentario.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>What does this word mean?</b><br><span style="color: #555;">-¿Qué significa esta palabra?</span></li>
+                <li><b>I didn't mean to upset you.</b><br><span style="color: #555;">-No quise decir eso para molestarte / No fue mi intención molestarte.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Meant /mɛnt/.</p>
+        </div>
+    `
+},
+{
+    en: "Measure",
+    es: "Medir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para determinar el tamaño, longitud, peso o cantidad de algo utilizando un instrumento o unidad métrica.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Measure the distance before cutting.</b><br><span style="color: #555;">-Mide la distancia antes de cortar.</span></li>
+                <li><b>The nurse measured my height.</b><br><span style="color: #555;">-La enfermera midió mi estatura.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Meet",
+    es: "Conocer (a alguien por primera vez) / Reunirse / Encontrarse",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para entablar contacto por primera vez con alguien, o para verse de forma planificada en un sitio.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Nice to meet you.</b><br><span style="color: #555;">-Gusto en conocerte.</span></li>
+                <li><b>Let's meet outside the cinema.</b><br><span style="color: #555;">-Reunámonos / Encontrémonos fuera del cine.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Met /mɛt/.</p>
+        </div>
+    `
+},
+{
+    en: "Melt",
+    es: "Derretir / Derretirse",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando una sustancia sólida pasa a estado líquido debido al incremento de la temperatura.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>The ice is starting to melt.</b><br><span style="color: #555;">-El hielo está empezando a derretirse.</span></li>
+                <li><b>Melt the butter in a pan.</b><br><span style="color: #555;">-Derrite la mantequilla en una sartén.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Mention",
+    es: "Mencionar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para nombrar o hacer referencia breve a algo o alguien mientras se habla o se escribe.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Don't mention this problem to him.</b><br><span style="color: #555;">-No le menciones este problema a él.</span></li>
+                <li><b>Did she mention where she was going?</b><br><span style="color: #555;">-¿Ella mencionó a dónde iba?</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Mix",
+    es: "Mezclar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para juntar o combinar dos o más sustancias, elementos o ingredientes de modo que formen una sola cosa.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Mix the flour with the water.</b><br><span style="color: #555;">-Mezcla la harina con el agua.</span></li>
+                <li><b>Oil and water don't mix.</b><br><span style="color: #555;">-El aceite y el agua no se mezclan.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Move",
+    es: "Mover / Moverse / Mudarse",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para cambiar de posición, cambiar de residencia o mover un objeto de lugar.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Please, move that chair.</b><br><span style="color: #555;">-Por favor, mueve esa silla.</span></li>
+                <li><b>We are moving to a new house.</b><br><span style="color: #555;">-Nos mudamos a una casa nueva.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Multiply",
+    es: "Multiplicar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para realizar la operación aritmética de multiplicación o para referirse al aumento rápido de algo.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Multiply 5 by 10.</b><br><span style="color: #555;">-Multiplica 5 por 10.</span></li>
+                <li><b>Our problems seem to multiply.</b><br><span style="color: #555;">-Nuestros problemas parecen multiplicarse.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Name",
+    es: "Nombrar / Llamar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para identificar a alguien o algo dándole un nombre, o para designar a alguien para un cargo.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Can you name all the capitals?</b><br><span style="color: #555;">-¿Puedes nombrar todas las capitales?</span></li>
+                <li><b>They named the baby Sophia.</b><br><span style="color: #555;">-Llamaron (nombraron) al bebé Sofía.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Notice",
+    es: "Notar / Darse cuenta / Observar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar que has percibido algo a través de los sentidos o de la atención.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Did you notice his new haircut?</b><br><span style="color: #555;">-¿Notaste su nuevo corte de pelo?</span></li>
+                <li><b>I didn't notice that it was raining.</b><br><span style="color: #555;">-No me di cuenta de que estaba lloviendo.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Offer",
+    es: "Ofrecer / Proponer",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa cuando propones dar algo a alguien o cuando sugieres realizar un servicio.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Can I offer you something to drink?</b><br><span style="color: #555;">-¿Puedo ofrecerte algo de beber?</span></li>
+                <li><b>They offered me a better job.</b><br><span style="color: #555;">-Ellos me ofrecieron un trabajo mejor.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Open",
+    es: "Abrir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para la acción de dejar un acceso libre, desplegar algo o iniciar un evento/negocio.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Please, open the window.</b><br><span style="color: #555;">-Por favor, abre la ventana.</span></li>
+                <li><b>The store opens at 9 AM.</b><br><span style="color: #555;">-La tienda abre a las 9 AM.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Order",
+    es: "Ordenar / Pedir / Mandar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para solicitar comida en un restaurante, para poner cosas en orden o para dar instrucciones (mandar).</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>What would you like to order?</b><br><span style="color: #555;">-¿Qué le gustaría pedir?</span></li>
+                <li><b>You must order your desk.</b><br><span style="color: #555;">-Debes ordenar tu escritorio.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Organize",
+    es: "Organizar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para planificar un evento, o para poner cosas en un orden lógico y eficiente.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>We are organizing a surprise party.</b><br><span style="color: #555;">-Estamos organizando una fiesta sorpresa.</span></li>
+                <li><b>He is good at organizing his time.</b><br><span style="color: #555;">-Él es bueno organizando su tiempo.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Pack",
+    es: "Empacar / Hacer la maleta",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para preparar el equipaje antes de viajar o para guardar cosas en cajas.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Have you packed your suitcase?</b><br><span style="color: #555;">-¿Ya empacaste tu maleta?</span></li>
+                <li><b>We need to pack everything for the move.</b><br><span style="color: #555;">-Necesitamos empacar todo para la mudanza.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Paint",
+    es: "Pintar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para aplicar pintura sobre una superficie o para crear una obra de arte.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>We are going to paint the kitchen white.</b><br><span style="color: #555;">-Vamos a pintar la cocina de blanco.</span></li>
+                <li><b>She loves to paint landscapes.</b><br><span style="color: #555;">-A ella le encanta pintar paisajes.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Pass",
+    es: "Pasar / Aprobar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para indicar el movimiento de un lado a otro, entregar algo a alguien, o superar un examen.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Can you pass the salt?</b><br><span style="color: #555;">-¿Puedes pasarme la sal?</span></li>
+                <li><b>She passed the final exam.</b><br><span style="color: #555;">-Ella aprobó el examen final.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Pay",
+    es: "Pagar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para entregar dinero a cambio de un producto o servicio.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>How much do I have to pay?</b><br><span style="color: #555;">-¿Cuánto tengo que pagar?</span></li>
+                <li><b>She paid in cash.</b><br><span style="color: #555;">-Ella pagó en efectivo.</span></li>
+            </ul>
+            <p style="margin-top: 15px; font-style: italic; font-size: 14px; color: #7f8c8d;">Pasado irregular: Paid /peɪd/.</p>
+        </div>
+    `
+},
+{
+    en: "Perform",
+    es: "Realizar / Ejecutar / Actuar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para llevar a cabo una tarea compleja, o para actuar frente a una audiencia (música, teatro).</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>The surgeon performed the operation.</b><br><span style="color: #555;">-El cirujano realizó la operación.</span></li>
+                <li><b>The band will perform tonight.</b><br><span style="color: #555;">-La banda actuará esta noche.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Pick",
+    es: "Escoger / Recoger / Cosechar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para seleccionar algo entre varias opciones, o para levantar cosas del suelo/cosechar frutas.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Pick a card from the deck.</b><br><span style="color: #555;">-Escoge una carta del mazo.</span></li>
+                <li><b>We picked apples at the farm.</b><br><span style="color: #555;">-Recogimos/cosechamos manzanas en la granja.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Plan",
+    es: "Planear / Planificar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para organizar los pasos necesarios para alcanzar un objetivo futuro.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>We are planning a trip to Europe.</b><br><span style="color: #555;">-Estamos planeando un viaje a Europa.</span></li>
+                <li><b>It's important to plan ahead.</b><br><span style="color: #555;">-Es importante planificar con antelación.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Play",
+    es: "Jugar / Tocar (un instrumento) / Reproducir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para actividades de recreación, para ejecutar música o para poner en marcha un archivo multimedia.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Children love to play outside.</b><br><span style="color: #555;">-A los niños les encanta jugar afuera.</span></li>
+                <li><b>She plays the guitar very well.</b><br><span style="color: #555;">-Ella toca la guitarra muy bien.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Point",
+    es: "Señalar / Apuntar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para dirigir la atención hacia algo extendiendo el dedo o algún objeto.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Don't point at people, it's rude.</b><br><span style="color: #555;">-No señales a las personas, es grosero.</span></li>
+                <li><b>She pointed to the map.</b><br><span style="color: #555;">-Ella señaló el mapa.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Pour",
+    es: "Verter / Servir",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para el acto de vaciar un líquido de un recipiente a otro.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>Pour the milk into the glass.</b><br><span style="color: #555;">-Vierte la leche en el vaso.</span></li>
+                <li><b>She poured some wine for him.</b><br><span style="color: #555;">-Ella le sirvió (vertió) algo de vino.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Practice",
+    es: "Practicar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para repetir una actividad constantemente con el fin de mejorar una destreza.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>I need to practice my English daily.</b><br><span style="color: #555;">-Necesito practicar mi inglés diariamente.</span></li>
+                <li><b>They practice basketball every day.</b><br><span style="color: #555;">-Ellos practican baloncesto todos los días.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "Praise",
+    es: "Elogiar / Alabar",
+    categoria: "Verbos de Acción",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se usa para expresar admiración o aprobación por las acciones o cualidades de alguien.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>The teacher praised her for the hard work.</b><br><span style="color: #555;">-El profesor la elogió por el arduo trabajo.</span></li>
+                <li><b>It's good to praise children.</b><br><span style="color: #555;">-Es bueno elogiar a los niños.</span></li>
+            </ul>
+        </div>
+    `
+},
 {en: "Prefer", es: "Preferir", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "Prepare", es: "Preparar", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
 {en: "Present", es: "Presentar / Exponer", categoria: "Verbos de Acción", racha: 0, pesoExtra: 0, fallos: 0},
