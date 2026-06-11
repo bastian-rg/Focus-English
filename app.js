@@ -2,6 +2,227 @@
 let masterDict = [
     // ⚠️ PEGA AQUÍ ADENTRO TUS 1000 PALABRAS EXACTAMENTE COMO LAS TIENES
 
+{
+    en: "if",
+    es: "Si (condicional)",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Evalúa si una condición es verdadera antes de ejecutar el código.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>if score > 70:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Aprobado")</b><br><span style="color: #555;">-Si el puntaje es mayor a 70, muestra "Aprobado".</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "else",
+    es: "Si no / De lo contrario",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Define la acción a seguir cuando la condición del 'if' no se cumple.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Menor de edad")</b><br><span style="color: #555;">-De lo contrario, muestra "Menor de edad".</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "elif",
+    es: "Si no, si",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Permite evaluar una nueva condición si las anteriores fueron falsas.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>elif nota >= 7:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Bueno")</b><br><span style="color: #555;">-Si no, si la nota es mayor o igual a 7, muestra "Bueno".</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "for",
+    es: "Para",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Inicia un bucle para recorrer elementos de una colección o secuencia.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>for numero in [1, 2, 3]:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(numero)</b><br><span style="color: #555;">-Para cada número en la lista, muéstralo en pantalla.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "while",
+    es: "Mientras",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Repite un bloque de código mientras una condición siga siendo verdadera.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>while contador < 5:<br>&nbsp;&nbsp;&nbsp;&nbsp;contador += 1</b><br><span style="color: #555;">-Mientras el contador sea menor a 5, suma 1 al contador.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "in",
+    es: "En",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Verifica la existencia de un elemento dentro de una colección o cadena de texto.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>if "a" in "gato":</b><br><span style="color: #555;">-Si la letra "a" se encuentra en la palabra "gato".</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "def",
+    es: "Definir",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Se utiliza para declarar una nueva función personalizada.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>def saludar():<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Hola")</b><br><span style="color: #555;">-Define una función llamada saludar que muestra "Hola".</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "return",
+    es: "Devolver / Retornar",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Finaliza una función y envía el resultado de vuelta a quien la llamó.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>return x * 2</b><br><span style="color: #555;">-Devuelve el valor de la variable x multiplicado por 2.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "and",
+    es: "Y",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Operador lógico que requiere que ambas condiciones sean verdaderas.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>if tiene_usuario and tiene_clave:</b><br><span style="color: #555;">-Si el usuario existe Y la contraseña es correcta.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "or",
+    es: "O",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Operador lógico que se cumple si al menos una condición es verdadera.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>if es_sabado or es_domingo:</b><br><span style="color: #555;">-Si el día actual es sábado O es domingo.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "not",
+    es: "No / Negación",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Invierte el valor de una condición lógica (de verdadero a falso y viceversa).</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>if not conectado:</b><br><span style="color: #555;">-Si el estado actual NO es conectado (está desconectado).</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "True",
+    es: "Verdadero",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Valor booleano que representa un estado afirmativo o exitoso.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>activo = True</b><br><span style="color: #555;">-Asigna el valor Verdadero a la variable llamada activo.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "False",
+    es: "Falso",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Valor booleano que representa un estado negativo o nulo.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>terminado = False</b><br><span style="color: #555;">-Determina que el proceso actual no ha finalizado todavía.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "print",
+    es: "Imprimir / Mostrar",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Función nativa que despliega texto o variables en la consola del sistema.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>print("Hola Mundo")</b><br><span style="color: #555;">-Envía y muestra el mensaje estático "Hola Mundo" en pantalla.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "input",
+    es: "Entrada de datos",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Detiene la ejecución del programa para recibir texto ingresado por el usuario.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>nombre = input("Tu nombre: ")</b><br><span style="color: #555;">-Muestra la petición en consola y guarda la respuesta del usuario.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "len",
+    es: "Longitud / Tamaño",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Cuenta y devuelve la cantidad de caracteres de un texto o elementos de una lista.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>total = len("Python")</b><br><span style="color: #555;">-Analiza la palabra y guarda el número 6 en la variable total.</span></li>
+            </ul>
+        </div>
+    `
+},
+{
+    en: "type",
+    es: "Tipo de dato",
+    categoria: "Python",
+    ejemplo: `
+        <div style="font-size: 18px; text-align: left; font-weight: normal; padding: 10px; color: #2c3e50;">
+            <p style="margin-bottom: 15px; font-size: 20px;">Inspecciona y retorna la naturaleza o clase del objeto consultado.</p>
+            <ul style="padding-left: 0px; list-style-type: none;">
+                <li style="margin-bottom: 8px;"><b>print(type(5))</b><br><span style="color: #555;">-Evalúa el número entero e imprime en pantalla su tipo, que es 'int'.</span></li>
+            </ul>
+        </div>
+    `
+},
 
 {
     en: "A",
